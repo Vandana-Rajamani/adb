@@ -2,17 +2,20 @@
 # Provisioning an Autonomous VM Cluster on Exadata Cloud@Customer
 
 ## Introduction
-Oracle Autonomous Database on Oracle Exadata Cloud@Customer provides the benefits of a self-driving, self-securing, and self-repairing database management system, bringing it closer to your applications on-premises while deployed securely behind your firewall. Setting up and using Autonomous databases on your Exadata Cloud@Customer consists of two steps
+Oracle Autonomous AI Database on Oracle Exadata Cloud@Customer delivers the benefits of a self-driving, self-securing, and self-repairing database management systemwhile keeping the database closer to your on-premises applications and securely deployed behind your firewall. Setting up and using Autonomous AI Databases on your Exadata Cloud@Customer consists of two steps:
 
 1. **Provision an Exadata Infrastructure**
 
-    This step is common regardless wether you chose to deploy the Autonomous service using database 19c and above or co-managed Exadata Cloud @ Customer service using database 11g and above. To provision an Oracle Exadata Cloud@Customer system, you must work with Oracle to set up and configure the system. **This step was completed in the previous lab**
+    This step is required regardless of whether you choose to deploy the Autonomous service using Database 19c and later, or a co-managed Exadata Cloud@Customer service using Database 11g and later. To provision an Oracle Exadata Cloud@Customer system, you must work with Oracle to install, configure, and activate the Exadata infrastructure.
+
+    **This step was completed in the previous lab**
 
 2. **Provision an Autonomous VM Cluster on your Exadata Infrastructure**
 
-    The type of VM Cluster you deploy on your Exadata Infrastrucure determines if its Autonomous  or co-managed. Once your Exadata Infrastruture is deployed and active, you may then create and Autonomous VM Cluster which runs your Autonomous Container Databases
+    The type of VM Cluster you deploy on your Exadata Infrastructure determines whether the environment is configured for Autonomous AI Database or a co-managed deployment.
+    After your Exadata Infrastructure has been deployed and is in the Available state, you can create an Autonomous VM Cluster to host your Autonomous Container Databases (ACDs).
 
-**This lab guide explains steps to setup an Autonomous VM Cluster on your on-premises Exadata Cloud@Customer**
+**This lab walks you through the steps required to create an Autonomous VM Cluster on your Exadata Cloud@Customer infrastructure.**
 
 ### Objectives
 
@@ -22,76 +25,78 @@ Oracle Autonomous Database on Oracle Exadata Cloud@Customer provides the benefit
 ### Required Artifacts
 - An Oracle Cloud Infrastructure account with a pre-provisioned instance of Exadata Infrastructure
 
-Watch the video below for step by step directions on creating an Autonomous VM Cluster on your Exadata Infrastructure
-
-[](youtube:yYKZ4oXw94Y)
-
 ## Create an Autonomous VM Cluster on your Exadata Cloud@Customer infrastructure.
 
-*Login to your OCI account as a fleet administrator*
+*Sign in to the OCI Console and Open the Navigation Menu.*.
 
-Navigate to the 'Exadata Cloud@Customer' option in the top left hamburger menu from your OCI home screen.
+Select **Oracle AI Database**. Click **Oracle Exadata Database Service at Cloud@Customer**.
 
-![create-avmc-cc1](./images/create-avmc-cc1.png " ")
+![OCI Console](./images/create-avmc-cc1.png " ")
 
-Select 'Autonomous Exadata VM Clusters' from the menu on the left and click **Create Autonomous Exadata VM Cluster** button
+Select **Autonomous Exadata VM Clusters** from the menu on the left and click **Create Autonomous Exadata VM Cluster**.
 
+![Create Autonomous Exadata VM Cluster](./images/create-avmc-cc2.png " ")
 
-![create-avmc-cc2](./images/create-avmc-cc2.png " ")
+On the **Create Autonomous Exadata VM Cluster** page enter the folowing information
 
-On the **Create Autonomous Exadata VM Cluster** page enter the folowing information;
+1. **Choose a compartment:** Select the compartment where you want to deploy the Autonomous VM Cluster and enter a display name. 
 
+2. **Select the Exadata Infrastructure:** Choose the Exadata Infrastructure on which the Autonomous VM Cluster will be created. If the infrastructure resides in a different compartment, switch to the appropriate compartment before selecting it.
 
-![create-avmc-cc3](./images/create-avmc-cc3.png " ")
+3. **Select the VM Cluster Network:** Choose the VM Cluster Network to associate with the Autonomous VM Cluster. Ensure that you select the correct compartment if the VM Cluster Network is located elsewhere. Select a VM Cluster Network. Once again, ensure you change the compartment to where your VM Cluster is deployed.
 
-1. **Choose a compartment** to deploy the VM Cluster and provide a display name.
+   ![Select VM Cluster Network](./images/create-avmc-cc3.png " ")
 
-2. **Select the Exadata Infrastructure.** Change the compartment if your Exadata Infrastructure was created in a different compartment than shown in the title
+4. **Configure the Autonomous VM Cluster Resources:**
 
-3. **VM Cluster Network:** Select a VM Cluster Network. Once again, ensure you change the compartment to where your VM Cluster is deployed
+    - Compute model: The default compute model is ECPU, which allocates compute resources elastically from the shared pool of Exadata database and storage servers. To use OCPU instead, click Change Compute Model. The OCPU model is based on physical processor cores with hyper-threading enabled.
 
-4. **Configure the Autonomous VM Cluster Resources:** 
-    
-        - Select compute model: Default model is ECPU. This is based on the number of cores elastically allocated from the shared pool of Exadata database servers and storage servers. Click Change compute model if you wish to select OCPU. OCPU compute model is based on the physical core of a processor with hyper-threading enabled. 
+        ![Compute model](./images/create-avmc-cc3a.png " ")
 
-        - DB Server Selection: By default, all the DB Servers that have the minimum resources needed to create an Autonomous VM Cluster are selected. Optionally, you can add or remove the VMs by clicking Edit DB Server Selection. Clicking this button launches the Change DB Servers dialog listing all the available DB Servers.
+    - DB Server Selection: By default, all database servers that meet the minimum resource requirements are selected. To add or remove database servers, click Edit DB Server Selection. This opens the Change DB Servers dialog, where you can review and select from the available database servers.
 
-        - Node Count: Denotes the number of database servers selected.
+        ![DB Server Selection](./images/create-avmc-cc4.png " ")
 
-        - Maximum number of Autonomous Container Databases: The number of ACDs specified represents the upper limit on ACDs. These ACDs must be created separately as needed. ACD creation also requires 2 available OCPUs per node.
+    - Node Count: Displays the number of selected database servers that will participate in the Autonomous VM Cluster.
 
-        - OCPU count per VM: Specify the OCPU count for each individual VM. The minimum value is 5 OCPUs per VM.
+    - Maximum number of Autonomous Container Databases: Specifies the maximum number of   Autonomous Container Databases (ACDs) that can be created in this Autonomous VM Cluster. 
+        The specified value represents an upper limit only. ACDs must be created separately when needed. Each ACD also requires at least 2 available OCPUs per node.
 
-        - Database memory per OCPU (GB): The memory per OCPU allocated for the Autonomous Databases in the Autonomous VM CLuster.
+    - OCPU count per VM: Specify the number of OCPUs allocated to each VM. The minimum supported value is 5 OCPUs per VM.
 
-        - Database storage(TB): Data storage allocated for Autonomous Database creation in the Autonomous VM Cluster
+    - Database memory per OCPU (GB): Specify the amount of memory allocated per OCPU for Autonomous Databases running in the Autonomous VM Cluster.
 
-![create-avmc-cc4](./images/create-avmc-cc4.png " ")
+    - Database storage(TB): Specify the storage capacity available for Autonomous Database creation within the Autonomous VM Cluster.
 
-5. **Configure Automatic Maintenance.** Optionally, configure the automatic maintenance schedule by clicking Modify Schedule.
+5. **Configure Automatic Maintenance:** Optionally, customize the maintenance schedule by clicking Modify Schedule. By default, the schedule is set to **No Preference**, allowing Oracle to perform maintenance when required.
 
-    You can then change the maintenance schedule from the default (No preference, which permits Oracle to schedule maintenance as needed) by selecting Specify a schedule and then selecting the months, weeks, days and hours for the schedule. You can also set a lead time to receive a notification message about an upcoming maintenance from Oracle.
+   To define a custom schedule:
+
+    - Select **Specify a Schedule**.
+    - Choose the preferred months, weeks, days, and hours for maintenance activities.
+    - Optionally, configure a notification lead time to receive advance notice before scheduled maintenance.
 
 6. **Choose the license type** you wish to use.
+    - Bring Your Own License (BYOL): Ensure that you have the appropriate Oracle Database license entitlements before selecting this option.
+    - License Included: The cost of the cloud service includes the required Oracle Database licenses.
 
-        - Bring your own license: If you choose this option, make sure you have proper entitlements to use for new service instances that you create.
-        - License included: With this choice, the cost of the cloud service includes a license for the Database service
+7. **Advanced Options:** Optionally, specify a time zone other than the default UTC setting.
 
-7. In the advanced options, you may pick a different timezone than the default UTC
+   ![Advanced Options](./images/create-avmc-cc4a.png " ")
 
-Click **Create Autonomous Exadata VM Cluster**
+   After completing the configuration, click **Create Autonomous Exadata VM Cluster**
 
-Once created, your Autonomous Exadata VM Cluster is ready to deploy Autonomous Container Databases. You will be able to see the resource allocation and usage info on the Autonomous Exadata VM Cluster details page.
+Once provisioning is complete, the Autonomous VM Cluster is ready for Autonomous Container Database deployment. You can review resource allocation and utilization details on the Autonomous VM Cluster details page.
 
-
-![create-avmc-cc5](./images/create-avmc-cc5.png " ")
+![Autonomous VM Cluster details page](./images/create-avmc-cc5.png " ")
 
 You may now **proceed to the next lab**.
 
 ## Acknowledgements
 
-*All Done! You have successfully setup your Autonomous VM Cluster on Exadata Cloud @ Customer environment. It is now ready to deploy Autonomous Container Databases*
-
 - **Author** - Simon Law, Kris Bhanushali and Ranganath S R
-- **Last Updated By/Date** - Ranganath S R, Feb 2023
+- **Adapted By/Date** - Vandana Rajamani, Consulting UA Developer, June 2026
+- **Last Updated By/Date** - Vandana Rajamani, Consulting UA Developer, July 2026
 
+## See an issue or have feedback?  
+Please submit feedback [here](https://apexapps.oracle.com/pls/apex/f?p=133:1:::::P1_FEEDBACK:1).   Select 'Autonomous DB on Dedicated Exadata' as workshop name, include Lab name and issue / feedback details. Thank you!
