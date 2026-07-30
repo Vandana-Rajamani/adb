@@ -2,7 +2,8 @@
 # Preparing your private network in the Oracle Cloud Infrastructure
 
 ## Introduction
-Oracle Autonomous AI Database on Dedicated Exadata Infrastructure runs on dedicated Exadata hardware in Oracle Cloud Infrastructure (OCI). It provides isolated, high-performance hardware resources, similar to operating a private cloud within a public cloud environment. In this hands-on lab, you review best practices for setting up a secure Autonomous AI Database platform. Although every organization should implement its own corporate security policies, this guide provides a framework for working with the Autonomous AI Database platform in OCI. The two key concepts covered are: a) separation of duties and b) network setup.
+
+Oracle Autonomous AI Database on Dedicated Exadata Infrastructure runs on dedicated Exadata hardware in Oracle Cloud Infrastructure (OCI). It provides isolated, high-performance hardware resources, similar to operating a private cloud within a public cloud environment. In this hands-on lab, you review best practices for setting up a secure Autonomous AI Database platform. Although every organization should implement its own corporate security policies, this guide provides a framework for working with the Autonomous AI Database platform in OCI. The two key concepts covered are: separation of duties and network setup.
 
 When configuring the dedicated infrastructure feature of Oracle Autonomous AI Database, you need to ensure that your cloud users have access to use and create only the appropriate kinds of cloud resources to perform their job duties. Additionally, you need to ensure that only authorized personnel and applications have network access to the Autonomous AI Databases created on dedicated infrastructure.
 
@@ -13,6 +14,7 @@ To implement network access controls, create VCNs and subnets. Then, using the s
 Estimated Time: 60 minutes
 
 ### Objectives
+
 As an OCI account administrator with network resource privileges:
 
 1. Create compartments and user groups with the right set of access policies for separation of duties.
@@ -20,20 +22,24 @@ As an OCI account administrator with network resource privileges:
 3. Layout a secure network for the database and application infrastructure.
 
 ### Required Artifacts
+
 - An Oracle Cloud Infrastructure account with privileges to create users, IAM policies, and networks.
 - Since this is the starting point to building your dedicated Autonomous AI Database platform, an admin account is recommended.
 
 ## Task 1: Create compartments, groups, users and IAM policies
-For separation of duties, Oracle recommends that a fleet administrator provision the Exadata Infrastructure, Autonomous VM Clusters, and Autonomous Container Databases, while database users consume those resources and provision their databases on them.
+
+For separation of duties, Oracle recommends that a fleet administrator provisions the Exadata Infrastructure, Autonomous VM Clusters, and Autonomous Container Databases, while database users consume those resources and provision their databases on them.
 
 You will use the following IAM structure in line with the bare minimum isolation recommended:
 
 - A **fleetCompartment** to hold the network resources, Cloud Exadata Infrastructure, Autonomous VM Clusters, and Autonomous Container Databases (ACDs).
 - A **dbUserCompartment** for database and application-user resources, such as Autonomous AI Databases and application client machines. Although this lab creates one dbUser compartment, in practice, each user can have a separate compartment for additional isolation.
-    - The fleet administrator has IAM policies to create and manage Cloud Exadata Infrastructure, ACDs, and network resources in the fleet compartment.
-    - Alternatively, a network administrator can provision the VCN and subnets first, after which a fleet administrator provisions the Exadata Infrastructure, Autonomous VM Clusters, and Autonomous Container Databases. The Exadata subnet can reside in a separate compartment.
+  - The fleet administrator has IAM policies to create and manage Cloud Exadata Infrastructure, ACDs, and network resources in the fleet compartment.
+  - Alternatively, a network administrator can provision the VCN and subnets first, after which a fleet administrator provisions the Exadata Infrastructure, Autonomous VM Clusters, and Autonomous Container Databases. The Exadata subnet can reside in a separate compartment.
 
 - Database users in the **dbUserCompartment** have *READ* privileges for ACD resources in the **fleetCompartment** only. They cannot create, delete, or modify those resources. A database user can have full privileges in their own compartment, where they can create and delete database and application resources.
+
+### Steps:
 
 1. Create two compartments: **fleetCompartment** and **dbUserCompartment**. In the OCI Console navigation menu, select **Identity & Security**, then **Compartments**. Click **Create compartment**, enter a name and description, and then click **Create compartment**.
 
@@ -53,25 +59,24 @@ You will use the following IAM structure in line with the bare minimum isolation
 
     - The following policy statements on the **fleetCompartment** ensure the groups **fleetAdmins** and **dbUsers** have the right privileges as explained earlier.
 
-    ```
-    <copy>
-    Allow group fleetAdmins to MANAGE cloud-exadata-infrastructures in compartment fleetCompartment
-    Allow group fleetAdmins to MANAGE autonomous-database-family in compartment fleetCompartment
-    Allow group fleetAdmins to USE virtual-network-family in compartment fleetCompartment
-    Allow group fleetAdmins to USE tag-namespaces in compartment fleetCompartment
-    Allow group fleetAdmins to USE tag-defaults in compartment fleetCompartment
-    </copy>
-    ```
+        ```
+        <copy>
+        Allow group fleetAdmins to MANAGE cloud-exadata-infrastructures in compartment fleetCompartment
+        Allow group fleetAdmins to MANAGE autonomous-database-family in compartment fleetCompartment
+        Allow group fleetAdmins to USE virtual-network-family in compartment fleetCompartment
+        Allow group fleetAdmins to USE tag-namespaces in compartment fleetCompartment
+        Allow group fleetAdmins to USE tag-defaults in compartment fleetCompartment
+        </copy>
+        ```
 
     - The only privilege **dbUsers** need in the **fleetCompartment** is `READ` access to Autonomous Container Databases, which is required to create their own Autonomous AI Databases. Add the following policy statement for the **fleetCompartment**:
 
-    ```
-    <copy>
-    Allow group dbUsers to READ autonomous-container-databases in compartment fleetCompartment
-    </copy>
-    ```
+        ```
+        <copy>
+        Allow group dbUsers to READ autonomous-container-databases in compartment fleetCompartment
+        </copy>
+        ```
    ![This image shows the result of performing the above step for creating the fleetAdminpolicy](./images/create-fleetadminpolicy.png " ")
-
 
 4. Similarly, create a **dbUserPolicy** for the **dbUserCompartment** as shown. *Ensure that you select the correct compartment before clicking **Create policy**.*
 
@@ -203,6 +208,3 @@ You may now **proceed to the next lab**.
 - **Author** - Tejus S. & Kris Bhanushali
 - **Adapted by** -  Vandana Rajamani, Consulting UA Developer, July 2026
 - **Last Updated By/Date** - Vandana Rajamani, Consulting UA Developer, July 2026
-
-## See an issue or have feedback?
-Please submit feedback [here](https://apexapps.oracle.com/pls/apex/f?p=133:1:::::P1_FEEDBACK:1).   Select 'Autonomous DB on Dedicated Exadata' as workshop name, include Lab name and issue / feedback details. Thank you!
