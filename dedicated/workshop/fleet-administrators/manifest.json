@@ -1,5 +1,5 @@
 {
-    "workshoptitle": "Introduction to ADB Dedicated for Fleet Administrators",
+    "workshoptitle": "Autonomous AI Database on Dedicated Exadata Infrastructure for Fleet Administrators",
     "help": "livelabs-help-db_us@oracle.com",
     "tutorials": [
                 {
@@ -17,23 +17,23 @@
             "filename": "./../../adb-network-prepare/adb-network-prepare.md"
         },
         {
-            "title": "Lab 2: Provisioning a Cloud Exadata Infrastructure for ADB on Dedicated Infrastructure",
-            "description": "Provisioning Cloud Exadata Infrastructure for Autonomous DB in OCI",
+            "title": "Lab 2: Provisioning a Cloud Exadata Infrastructure for Autonomous AI Database on Dedicated Exadata Infrastructure",
+            "description": "Provisioning Cloud Exadata Infrastructure for Autonomous AI Database on Dedicated Exadata Infrastructure",
             "filename": "./../../adb-provisioning-exadata/adb-provisioning-exadata.md"
         },
         {
-            "title": "Lab 3: Provisioning a Cloud Autonomous Exadata VM Cluster for ADB on Dedicated Infrastructure",
-            "description": "Provisioning Cloud Autonomous Exadata VM Cluster for Autonomous DB in OCI",
+            "title": "Lab 3: Provisioning a Cloud Autonomous Exadata VM Cluster for Autonomous AI Database on Dedicated Exadata Infrastructure",
+            "description": "Provisioning Cloud Autonomous Exadata VM Cluster for Autonomous AI Database on Dedicated Exadata Infrastructure",
             "filename": "./../../adb-prov-cloud-vmc/adb-prov-cloud-vmc.md"
         },
         {
-            "title": "Lab 4: Provisioning Exadata Infrastructure for ADB on Exadata Cloud@Customer",
-            "description": "Provisioning Exadata Infrastructure for Autonomous DB on ExaC@C",
+            "title": "Lab 4: Provisioning Exadata Infrastructure for Autonomous AI Database on Exadata Cloud@Customer",
+            "description": "Provisioning Exadata Infrastructure for Autonomous AI Database on Exadata Cloud@Customer",
             "filename": "./../../adb-prov-exacc/adb-prov-exacc.md"
         },
         {
-            "title": "Lab 5: Provisioning an Autonomous VM Cluster for ADB on Exadata Cloud@Customer",
-            "description": "Provisioning an Autonomous VM Cluster for Autonomous DB on ExaC@C",
+            "title": "Lab 5: Provisioning an Autonomous VM Cluster for Autonomous AI Database on Exadata Cloud@Customer",
+            "description": "Provisioning an Autonomous VM Cluster for Autonomous AI Database on Exadata Cloud@Customer",
             "filename": "./../../adb-prov-vmc/adb-prov-vmc.md"
         },
         {
@@ -48,12 +48,12 @@
         },
         {
             "title": "Lab 8: Autonomous Data Guard",
-            "description": "Enabling and using Autonomous Data Guard",
+            "description": "Using Autonomous Data Guard",
             "filename": "./../../adb-data-guard/adb-data-guard.md"
         },
         {
             "title": "Lab 9: Migrate with Data Pump",
-            "description": "Migrating to Dedicated ATP using Data Pump",
+            "description": "Migrating to Dedicated Autonomous AI Database using Data Pump",
             "filename": "./../../atp-data-pump-migration/atp-data-pump-migration.md"
         },
         {
@@ -67,13 +67,13 @@
             "filename": "./../../adb-event-notifications/adb-event-notifications.md"
         },
         {
-            "title": "Lab 12: Deploy OEM and connect ADB to OEM",
-            "description": "Deploy OEM and connect ADB to OEM",
+            "title": "Lab 12: Deploy Oracle Enterprise Manager (OEM) and connect Autonomous AI Database to OEM",
+            "description": "Deploy Oracle Enterprise Manager (OEM) and connect Autonomous AI Database to OEM",
             "filename": "./../../adb-oem/adb-deploy-oem.md"
         },
         {
-            "title": "Lab 13: Download AWR report from OEM",
-            "description": "Automatic Indexing",
+            "title": "Lab 13: Download Autonomous Workload Repository(AWR) report from Oracle Enterprise Manager (OEM)",
+            "description": "Download Autonomous Workload Repository(AWR) report from Oracle Enterprise Manager (OEM)",
             "filename": "./../../adb-oem/awr-with-oem.md"
         },
         {
@@ -85,11 +85,6 @@
             "title": "Lab 15: Operator Access Control",
             "description": "Operator Access Control",
             "filename": "./../../adb-operator-access-control/operatorcontrol.md"
-        },
-        {
-            "title": "Appendix",
-            "description": "Common tools for windows Users Finding the IP address of your AEI Cluster.",
-            "filename": "./../../adb-appendix/adb-appendix.md"
         },
         {
             "title": "Need Help?",
