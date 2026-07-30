@@ -17,13 +17,13 @@
             "filename": "./../../adb-network-prepare/adb-network-prepare.md"
         },
         {
-            "title": "Lab 2: Provisioning a Cloud Exadata Infrastructure for Autonomous AI Database on Dedicated Exadata Infrastructure",
-            "description": "Provisioning Cloud Exadata Infrastructure for Autonomous AI Database on Dedicated Exadata Infrastructure",
+            "title": "Lab 2: Provisioning a Cloud Exadata Infrastructure for Autonomous AI Database",
+            "description": "Provisioning Cloud Exadata Infrastructure for Autonomous AI Database ",
             "filename": "./../../adb-provisioning-exadata/adb-provisioning-exadata.md"
         },
         {
-            "title": "Lab 3: Provisioning a Cloud Autonomous Exadata VM Cluster for Autonomous AI Database on Dedicated Exadata Infrastructure",
-            "description": "Provisioning Cloud Autonomous Exadata VM Cluster for Autonomous AI Database on Dedicated Exadata Infrastructure",
+            "title": "Lab 3: Provisioning a Cloud Autonomous Exadata VM Cluster for Autonomous AI Database",
+            "description": "Provisioning Cloud Autonomous Exadata VM Cluster for Autonomous AI Database ",
             "filename": "./../../adb-prov-cloud-vmc/adb-prov-cloud-vmc.md"
         },
         {
