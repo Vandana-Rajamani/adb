@@ -82,6 +82,5 @@ You may now **proceed to the next lab**.
 ## Acknowledgements
 
 - **Author** - Ranganath S R & Kris Bhanushali
-- **Adapted by** -  YVandana Rajamani, Consulting UA Developer, July 2026
+- **Adapted by** -  Vandana Rajamani, Consulting UA Developer, July 2026
 - **Last Updated By/Date** - Vandana Rajamani, Consulting UA Developer, July 2026
-
