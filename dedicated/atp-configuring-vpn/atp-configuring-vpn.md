@@ -96,6 +96,7 @@ Within a few minutes, your Linux server will be ready with a public IP address f
 In this task, you install OpenVPN Access Server on the Linux VM, set an administrator password, and configure routing and DNS so VPN clients can reach private subnets, such as the application and Exadata subnets, without routing all internet traffic through the VPN.
 
 - Prerequisites:
+
   - You have the public IP address of your Linux VM.
   - You can SSH to the VM (security list/NSG allows TCP/22 from your source).
   - Your OpenVPN server VM can reach the internet to download packages.
@@ -141,11 +142,12 @@ In this task, you install OpenVPN Access Server on the Linux VM, set an administ
     Configure NAT, split tunneling, and DNS so that VPN clients can reach the private application and Exadata subnets.
 
     In current Access Server releases, use the access-control and VPN-network configuration pages to apply the following settings:
-  - Allow access to only the required application and Exadata subnet CIDR blocks.
-  - Use NAT for client access to these private subnets.
-  - Disable routing of general client internet traffic through the VPN (split tunneling).
 
-      ![Use VPN NAT.](./images/vpn-nat.png " ")
+    - Allow access to only the required application and Exadata subnet CIDR blocks.
+    - Use NAT for client access to these private subnets.
+    - Disable routing of general client internet traffic through the VPN (split tunneling).
+
+       ![Use VPN NAT.](./images/vpn-nat.png " ")
 
     Configure the DNS settings required to resolve names in the private network.
 

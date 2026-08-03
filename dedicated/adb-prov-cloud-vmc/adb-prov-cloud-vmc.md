@@ -57,6 +57,7 @@ Estimated Time: 20 minutes
             ![create avmc resources requested](./images/create-avmc-pc4.png " ")  
 
     4. **Configure network settings.** Select the VCN and subnet in which your VM Cluster will be deployed.
+    
         - Virtual cloud network: The virtual cloud network (VCN) in which you want to create the new Autonomous Exadata VM Cluster.
 
         - Subnet: A subnet within the above selected VCN for the new Autonomous Exadata VM Cluster.
@@ -69,13 +70,14 @@ Estimated Time: 20 minutes
 
         ![create avmc automatic maintenance](./images/create-avmc-pc5a.png " ")
 
-    6. **Choose the license type** you wish to use.
+    6. Choose the **license type** you wish to use.
+
         - Bring your own license: If you choose this option, make sure you have proper entitlements to use for new service instances that you create.
         - License included: With this choice, the cost of the cloud service includes a license for the Database service.
 
     7. In the advanced options, you may pick a different timezone than the default UTC. You can optionally add a security attribute to control access for your AVMC resource using Zero Trust Packet Routing (ZPR) policies. 
 
-- Click **Create Autonomous Exadata VM Cluster**.
+- Click **Create**.
 
 Once created, your Autonomous Exadata VM Cluster is ready to deploy Autonomous Container Databases.
 

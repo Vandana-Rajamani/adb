@@ -1,10 +1,10 @@
-# Migrating to Dedicated ATP using Data Pump
+# Migrating to Autonomous AI Database on Dedicated Exadata Infrastructure using Data Pump
 
 ## Introduction
 
-Oracle Data Pump provides fast bulk data and metadata movement between user-managed Oracle AI Databases and Autonomous AI Transaction Processing (ATP) databases.
+Oracle Data Pump provides fast bulk data and metadata movement between user-managed Oracle AI Databases and Autonomous AI Database on Dedicated Exadata Infrastructure.
 
-Data Pump Import can import data from dump files stored in Oracle Cloud Infrastructure Object Storage. In this lab, you upload a sample dump file to Object Storage and use Data Pump Import to load it into a dedicated ATP database.
+Data Pump Import can import data from dump files stored in Oracle Cloud Infrastructure Object Storage. In this lab, you upload a sample dump file to Object Storage and use Data Pump Import to load it into an Autonomous AI Database on Dedicated Exadata Infrastructure.
 
 This lab walks you through migrating a sample application schema into your Autonomous AI Database on Dedicated Exadata infrastructure by using Data Pump Import.
 
@@ -16,20 +16,17 @@ As a database admin or user:
 
 1. Download a sample Data Pump export dump file from the Oracle Learning Library GitHub repository.
 2. Upload the `.dmp` file to an OCI Object Storage bucket.
-3. Create cloud credentials and use Data Pump Import to move data into your dedicated ATP database.
-
+3. Create cloud credentials and use Data Pump Import to move data into your Autonomous AI Database on Dedicated Exadata Infrastructure.
 
 ### Required Artifacts
 
-- An Oracle Cloud Infrastructure account with privileges to create Object Storage buckets and dedicated Autonomous AI Databases.
-- Access to a pre-provisioned dedicated ATP instance.
+- An Oracle Cloud Infrastructure account with privileges to create Object Storage buckets and Autonomous AI Database on Dedicated Exadata Infrastructure.
+- Access to a pre-provisioned Autonomous AI Database on Dedicated Exadata Infrastructure.
 - A pre-provisioned Oracle Developer Client image in an application subnet. If you have not created one yet, complete the lab **Configuring a Development System** in [Autonomous Database Dedicated for Developers and Database Users workshop](https://livelabs.oracle.com/ords/r/dbpm/livelabs/run-workshop?p210_wid=3197).
 
 ## Task 1: Download sample Data Pump export file from Oracle Learning Library GitHub repository
 
 - From your Mac or PC, run the following command to download the sample schema dump file from Oracle Learning Library.
-
-** Need to change this to a file thats available to be downloaded**
 
     ```
     <copy>
@@ -182,7 +179,3 @@ You may now **proceed to the next lab**.
 - **Author** - Tejus S. & Kris Bhanushali
 - **Adapted by** -  Vandana Rajamani, Consulting UA Developer, June 2026
 - **Last Updated By/Date** - Vandana Rajamani, Consulting UA Developer, July 2026
-
-
-## See an issue or have feedback?
-Please submit feedback [here](https://apexapps.oracle.com/pls/apex/f?p=133:1:::::P1_FEEDBACK:1). Select 'Autonomous DB on Dedicated Exadata' as the workshop name, and include the lab name and issue or feedback details. Thank you!

@@ -15,6 +15,7 @@ Estimated Time: 45 minutes
 - As a fleet administrator, Add a standby database to an existing Autonomous Container Database (ACD)
 
 - As a database user, DBA or application developer:
+
   1. Provision an Autonomous AI Database within an Autonomous Container Database (ACD).
   2. Install and configure Swingbench against the primary Autonomous AI Database, then test both switchover and failover scenarios.
   3. Reinstate an Autonomous Data Guard standby database after a failover operation.
@@ -29,6 +30,7 @@ Estimated Time: 45 minutes
 
 - Go to the Details page of the Autonomous Container Database for which you want to add a standby database.
 - Click **Enable** under **Autonomous Data Guard** in Autonomous Container Database information. Alternatively, you can also click **Add Standby** on **Autonomous Data Guard Groups**. Fill out the **Add Standby** dialog with the following information:
+
   - Peer Autonomous Container Database compartment: Select the standby Autonomous Container Database compartment.
   - Peer Autonomous Container Database name: Enter a name for the standby ACD.
   - Peer database backup configuration: Select a Backup Destination type from the drop-down list.
@@ -47,6 +49,7 @@ Estimated Time: 45 minutes
 
 - Go to **Autonomous AI Database** in the Oracle Cloud Infrastructure Console. If needed, switch to the region where you want to create the database.
 - Click **Create Autonomous AI Database**. Fill out the Create Autonomous AI Database page with the following information:
+
   - Compartment: Select a compartment to host the Autonomous AI Database.
   - Display name: Enter a user-friendly description or other information that helps you easily identify the Autonomous AI Database.
   - Database name: Provide a name for the new Autonomous AI Database.
@@ -54,17 +57,20 @@ Estimated Time: 45 minutes
   - Autonomous Container Database: Select the primary ACD in which to create the Autonomous AI Database.
 
     ![Basic information on creating ADB.](./images/provision-atp1.png " ")
+
   - Configure the database - CPU count: Select the number of CPUs for your database from the list of provisionable CPUs.
   - Configure the database - CPU auto scaling: Enable or disable CPU auto scaling, which permits Autonomous AI Database to automatically use up to three times as many CPUs as specified by CPU Count as the workload on the database increases.
   - Configure the database - Storage (GB): Specify the storage to allocate to your database in terabytes (GB), with a minimum value of 32 GB.
 
     ![Configure database details.](./images/provision-atp2.png " ")
+
   - Username: Denotes the database’s username. This is a read-only value.
   - Password: Set the password for the Admin database user in your new database. Re-confirm the password.
   - Access Control:  Optionally, click Modify Access Control to configure network access by enabling database level access control, which is disabled by default.
   - Contact email:  Provide contact emails where you can receive operational notifications, announcements, and unplanned maintenance notifications.
 
     ![Administrator credential creation.](./images/provision-atp3.png " ")
+
   - Advanced options - Encryption key: The encryption key settings are inherited from the parent Autonomous Container Database.
   - Advanced options - Management: Choose a Character Set and National Character Set from the drop-down list.
   - Advanced options - Database In-memory: Optionally, select Enable database In-memory and adjust the percentage of System Global Area (SGA) to allocate.
@@ -130,10 +136,12 @@ You have now installed and configured Swingbench to generate a transactional wor
   ![Convert to snapshot standby.](./images/convert-snapshotstandby.png " ")
 
 - The Convert to snapshot standby dialog displays with options to use new Database services or primary Database services for the snapshot standby database connections.
+
   - Use new Database services: Click this option to connect to snapshot standby using new services that are active only in the snapshot standby mode.
   - Use primary Database services: Click this option if you wish to connect to snapshot standby database using the same services as the primary database.
 
 - You will be presented with two options while converting the database to snapshot mode.
+
   - Use new database services: New snapshot standby services will be created in your standby database that you will use to connect to it.
   - Use primary database services: Databases services that are active on primary ACD will be enabled on the snapshot standby ACD also. Extreme caution must be taken while using the primary services.
 

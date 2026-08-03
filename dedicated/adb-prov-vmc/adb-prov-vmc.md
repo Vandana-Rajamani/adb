@@ -78,6 +78,7 @@ On the **Create Autonomous Exadata VM Cluster** page enter the following informa
     - Optionally, configure a notification lead time to receive advance notice before scheduled maintenance.
 
 6. **Choose the license type** you wish to use.
+
     - Bring Your Own License (BYOL): Ensure that you have the appropriate Oracle Database license entitlements before selecting this option.
     - License Included: The cost of the cloud service includes the required Oracle Database licenses.
 

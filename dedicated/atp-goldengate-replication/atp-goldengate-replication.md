@@ -91,7 +91,8 @@ The source database is now prepared for replication.
 ## Task 3: Configure the target Autonomous AI Database
 
 - Connect to the Autonomous AI Database provisioned earlier as *admin*.
-  - Use VPN or a jump host if required. Refer [Configure VPN Connectivity in your Exadata Network](?lab=atp-configuring-vpn) for details.
+
+  - Use VPN or a jump host if required. Refer [Configure VPN Connectivity in your Exadata Network](?lab=atp-configuring-vpn) for details.  
 - Unlock `ggadmin` and grant quota:
 
 ```sql
@@ -123,10 +124,10 @@ The target database is now ready.
 - In OCI, open **Compute** and select the GoldenGate compute instance.
 - Note down the public IP address of the GoldenGate compute instance. You will use this IP address to ssh into the virtual machine.
 
-
 ### 4.2 Prepare connectivity
 
 - Gather TNS connection details for:
+
   - source database common user
   - source database appschema user
   - target Autonomous AI Database
@@ -231,7 +232,6 @@ cat ogg-credentials.json
 
    ![Set heartbeat](./images/heartbeat.png)
 
-
 ### 4.8 Create the extract process
 
 - Navigate back to the GoldenGate Admin server dashboard so you can see both the extract and replicat setup as shown below.
@@ -239,7 +239,9 @@ cat ogg-credentials.json
    ![Goldengate Admin console](./images/extract1.png)
 
 - Create an **Integrated Extract** process.
+   
    Enter:
+
   - Process Name: Give a descriptive name
   - Credential Domain: `OracleGoldenGate`
   - Credential Alias: Pick the common user alias for source database. For example, sourceCommonUser
@@ -272,6 +274,7 @@ cat ogg-credentials.json
    ![Add Replicat screen](./images/replicat1.png)
 
 - Enter:
+
   - Process Name: `Rep1`
   - Credential Domain: `OracleGoldenGate`
   - Credential Alias: target ggadmin alias ((or the alias name you provided for ggadmin user on your Autonomous AI Database instance))
@@ -321,6 +324,4 @@ You may now **proceed to the next lab**.
 - **Adapted by** - Vandana Rajamani, Consulting UA Developer, July 2026
 - **Last Updated By/Date** - Vandana Rajamani, Consulting UA Developer, July 2026
 
-## See an issue or have feedback?
 
-Please submit feedback [here](https://apexapps.oracle.com/pls/apex/f?p=133:1:::::P1_FEEDBACK:1). Select 'Autonomous DB on Dedicated Exadata' as workshop name, include Lab name and issue / feedback details. Thank you!

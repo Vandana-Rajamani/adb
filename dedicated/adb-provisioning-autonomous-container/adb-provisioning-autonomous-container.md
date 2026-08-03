@@ -47,6 +47,7 @@ As a fleet administrator:
   ![Change Maintenance schedule.](./images/create-acd3b.png " ")
 
 - By default, automatic backups are enabled for an ACD. Optionally, you can choose to disable them by deselecting the Enable automatic backups check box. When you enable automatic backups, choose from the following options to determine how long backups are retained after terminating the ACD:
+
   - Retain backups as per the backup retention period
   - Retain backups for 72 hours, then delete
 
