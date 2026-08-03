@@ -1,5 +1,5 @@
 
-# Provisioning Cloud Exadata Infrastructure for Autonomous AI Database in OCI
+# Provision Cloud Exadata Infrastructure for Autonomous AI Database in OCI
 
 ## Introduction
 

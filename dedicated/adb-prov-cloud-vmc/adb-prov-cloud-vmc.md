@@ -1,5 +1,5 @@
 
-# Provisioning a Cloud Autonomous Exadata VM Cluster for Autonomous AI Database
+# Provision a Cloud Autonomous Exadata VM Cluster for Autonomous AI Database
 
 ## Introduction
 

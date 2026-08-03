@@ -1,4 +1,4 @@
-# Autonomous Data Guard
+# Use Autonomous Data Guard to protect Autonomous AI Databases from failures
 
 ## Introduction
 
@@ -10,17 +10,15 @@ The primary and standby databases are often called peer databases of each other.
 
 Estimated Time: 45 minutes
 
-### Objectives: 
+### Objectives:
 
-- As a fleet administrator:
-  1. Add a standby database to an existing Autonomous Container Database (ACD)
+- As a fleet administrator, Add a standby database to an existing Autonomous Container Database (ACD)
 
 - As a database user, DBA or application developer:
-  1. Provision an Autonomous AI Transaction Processing database within an Autonomous Container Database (ACD).
+  1. Provision an Autonomous AI Database within an Autonomous Container Database (ACD).
   2. Install and configure Swingbench against the primary Autonomous AI Database, then test both switchover and failover scenarios.
   3. Reinstate an Autonomous Data Guard standby database after a failover operation.
   4. Convert a physical standby database to a snapshot standby database and convert it back to a physical standby database.
-
 
 ### Required Artifacts
 
@@ -43,7 +41,9 @@ Estimated Time: 45 minutes
 
 - Confirm to add the standby database.
 
-## Task 2: Create an Autonomous Transaction Processing Database
+**Note**: In an Autonomous Data Guard setup, you can add a second standby Autonomous Container Database (ACD) to the primary ACD. The second standby ACD must be in the same tenancy as the primary ACD. To be able to add a second standby ACD, the first standby ACD should not have automatic failover enabled. You must disable automatic failover on the first standby before adding the second standby and can re-enable later.
+
+## Task 2: Create an Autonomous AI Database
 
 - Go to **Autonomous AI Database** in the Oracle Cloud Infrastructure Console. If needed, switch to the region where you want to create the database.
 - Click **Create Autonomous AI Database**. Fill out the Create Autonomous AI Database page with the following information:
@@ -132,8 +132,8 @@ You have now installed and configured Swingbench to generate a transactional wor
 - The Convert to snapshot standby dialog displays with options to use new Database services or primary Database services for the snapshot standby database connections.
   - Use new Database services: Click this option to connect to snapshot standby using new services that are active only in the snapshot standby mode.
   - Use primary Database services: Click this option if you wish to connect to snapshot standby database using the same services as the primary database.
-- You will be presented with two options while converting the database to snapshot mode.
 
+- You will be presented with two options while converting the database to snapshot mode.
   - Use new database services: New snapshot standby services will be created in your standby database that you will use to connect to it.
   - Use primary database services: Databases services that are active on primary ACD will be enabled on the snapshot standby ACD also. Extreme caution must be taken while using the primary services.
 
@@ -162,7 +162,3 @@ You may now **proceed to the next lab**.
 - **Author** - Jeffrey Cowen, Ranganath S R
 - **Adapted By/Date :** - Vandana Rajamani, Consulting UA Developer, June 2026
 - **Last Updated By/Date** - Vandana Rajamani, Consulting UA Developer, July 2026
-
-## See an issue or have feedback?
-
-Please submit feedback [here](https://apexapps.oracle.com/pls/apex/f?p=133:1:::::P1_FEEDBACK:1).   Select 'Autonomous DB on Dedicated Exadata' as workshop name, include Lab name and issue / feedback details. Thank you!

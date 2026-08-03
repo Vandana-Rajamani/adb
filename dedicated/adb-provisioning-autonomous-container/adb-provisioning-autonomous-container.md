@@ -1,4 +1,4 @@
-# Provisioning an Autonomous Container Database
+# Provision an Autonomous Container Database
 
 ## Introduction
 

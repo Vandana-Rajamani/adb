@@ -17,27 +17,27 @@
             "filename": "./../../adb-network-prepare/adb-network-prepare.md"
         },
         {
-            "title": "Lab 2: Provisioning a Cloud Exadata Infrastructure for Autonomous AI Database",
+            "title": "Lab 2: Provision a Cloud Exadata Infrastructure for Autonomous AI Database",
             "description": "Provisioning Cloud Exadata Infrastructure for Autonomous AI Database ",
             "filename": "./../../adb-provisioning-exadata/adb-provisioning-exadata.md"
         },
         {
-            "title": "Lab 3: Provisioning a Cloud Autonomous Exadata VM Cluster for Autonomous AI Database",
+            "title": "Lab 3: Provision a Cloud Autonomous Exadata VM Cluster for Autonomous AI Database",
             "description": "Provisioning Cloud Autonomous Exadata VM Cluster for Autonomous AI Database ",
             "filename": "./../../adb-prov-cloud-vmc/adb-prov-cloud-vmc.md"
         },
         {
-            "title": "Lab 4: Provisioning Exadata Infrastructure for Autonomous AI Database on Exadata Cloud@Customer",
+            "title": "Lab 4: Provision Exadata Infrastructure for Autonomous AI Database on Exadata Cloud@Customer",
             "description": "Provisioning Exadata Infrastructure for Autonomous AI Database on Exadata Cloud@Customer",
             "filename": "./../../adb-prov-exacc/adb-prov-exacc.md"
         },
         {
-            "title": "Lab 5: Provisioning an Autonomous VM Cluster for Autonomous AI Database on Exadata Cloud@Customer",
+            "title": "Lab 5: Provision an Autonomous VM Cluster for Autonomous AI Database on Exadata Cloud@Customer",
             "description": "Provisioning an Autonomous VM Cluster for Autonomous AI Database on Exadata Cloud@Customer",
             "filename": "./../../adb-prov-vmc/adb-prov-vmc.md"
         },
         {
-            "title": "Lab 6: Provisioning an Autonomous Container Database",
+            "title": "Lab 6: Provision an Autonomous Container Database",
             "description": "Provisioning an Autonomous Container Database",
             "filename": "./../../adb-provisioning-autonomous-container/adb-provisioning-autonomous-container.md"
         },
@@ -47,8 +47,8 @@
             "filename": "./../../atp-configuring-vpn/atp-configuring-vpn.md"
         },
         {
-            "title": "Lab 8: Autonomous Data Guard",
-            "description": "Using Autonomous Data Guard",
+            "title": "Lab 8: Use Autonomous Data Guard to protect Autonomous AI Databases from failures",
+            "description": "Using Autonomous Data Guard to protect Autonomous AI Databases from failures",
             "filename": "./../../adb-data-guard/adb-data-guard.md"
         },
         {
@@ -57,12 +57,12 @@
             "filename": "./../../atp-data-pump-migration/atp-data-pump-migration.md"
         },
         {
-            "title": "Lab 10: Oracle GoldenGate Replication",
+            "title": "Lab 10: Migrate to Autonomous AI Database using Oracle GoldenGate Replication",
             "description": "Live migration to ATP-Dedicated using Oracle GoldenGate replication",
             "filename": "./../../atp-goldengate-replication/atp-goldengate-replication.md"
         },
         {
-            "title": "Lab 11: OCI Notification Service",
+            "title": "Lab 11: Notify Autonomous AI Database events using OCI Notification Service",
             "description": "Setting up DB event notifications using OCI Notification service",
             "filename": "./../../adb-event-notifications/adb-event-notifications.md"
         },
@@ -77,12 +77,12 @@
             "filename": "./../../adb-oem/awr-with-oem.md"
         },
         {
-            "title": "Lab 14: Oracle Standard Tags",
-            "description": "Oracle Standard Tags",
+            "title": "Lab 14: Use Oracle Standard Tags",
+            "description": "Use Oracle Standard Tags",
             "filename": "./../../oracle-standard-tags/oracle-standard-tags.md"
         },
         {
-            "title": "Lab 15: Operator Access Control",
+            "title": "Lab 15: Manage Operator Access Control",
             "description": "Operator Access Control",
             "filename": "./../../adb-operator-access-control/operatorcontrol.md"
         },

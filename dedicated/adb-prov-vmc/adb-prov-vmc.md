@@ -1,5 +1,5 @@
 
-# Provisioning an Autonomous VM Cluster on Exadata Cloud@Customer
+# Provision an Autonomous VM Cluster on Exadata Cloud@Customer
 
 ## Introduction
 
