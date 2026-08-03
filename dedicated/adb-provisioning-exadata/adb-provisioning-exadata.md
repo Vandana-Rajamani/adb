@@ -26,7 +26,7 @@ Your tenancy has service limits that define the maximum number of resources you 
 
 *Sign in to your OCI account as an administrator.*
 
-- In the OCI Console navigation menu, select **Governance & Administration**. Under **Tenancy Management**, select **Limits, Quotas and Usage**.
+- In the OCI Console navigation menu, select **Governance & Administration**. Under **Tenancy Management**, select **Limits, quotas and usage**.
 
     ![This image shows the OCI Console Home page.](./images/limit1.png " ")
 
@@ -59,7 +59,7 @@ Your tenancy has service limits that define the maximum number of resources you 
 
   ![This image shows the basic fields for Exadata creation.](./images/create-cei2.png " ")
 
-- Specify the number of database and storage servers for the Exadata Infrastructure resource. The default configuration is two database servers and three storage servers. You can choose different values within the ranges supported by the selected Exadata Database Machine type and the available service limits.
+- Specify the number of database and storage servers for the Exadata Infrastructure resource. The default configuration is two database servers and three storage servers. You can choose different values within the ranges supported by the selected Exadata Database machine type and the available service limits.
 
   ![This image shows the Database and storage options.](./images/create-cei3.png " ")
 
@@ -71,7 +71,7 @@ Your tenancy has service limits that define the maximum number of resources you 
 
   ![This image shows the result of changing Maintennace schedule.](./images/create-cei3b.png " ")
 
-- Add contact email addresses for operational notifications and announcements, then select **Create Exadata Infrastructure**. When the CEI becomes available, you can proceed to create an Autonomous VM Cluster and an Autonomous Container Database.
+- Add contact email addresses for operational notifications and announcements, then select **Create Exadata Infrastructure**. When the Exadata Infrastructure becomes available, you can proceed to create an Autonomous VM Cluster and an Autonomous Container Database.
 
   ![This image shows the result of adding contact details.](./images/create-cei4.png " ")
 

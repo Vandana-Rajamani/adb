@@ -4,17 +4,17 @@
 
 Oracle Autonomous AI Database on Dedicated Exadata Infrastructure can be deployed in a private virtual cloud network (VCN) in Oracle Cloud Infrastructure (OCI), without a public IP address. A VPN connection is one approach for providing controlled client connectivity to the databases.
 
-This lab walks you through deploying an OpenVPN Access Server in OCI and creating a VPN connection between a client machine and the dedicated Autonomous AI Database infrastructure. After it is configured, a single VPN server can support multiple users.
+This lab walks you through deploying an OpenVPN Access Server in OCI and creating a VPN connection between a client machine and Autonomous AI Database on Dedicated Exadata Infrastructure. After it is configured, a single VPN server can support multiple users.
 
 Estimated Time: 45 minutes
 
 ### Objectives
+
 As a network or fleet administrator:
 
 1. Configure a VPN server in OCI based on OpenVPN software.
 2. Configure your VPN client and connect to the VPN server.
 3. Launch SQL Developer on the client and connect to a dedicated Autonomous AI Database instance.
-
 
 ### Required Artifacts
 
@@ -40,35 +40,35 @@ The following illustration shows a network topology that can be used to provide 
     ![Navigate OCI Console.](./images/createcompute1.png " ")
 
 - Click **Create instance**.
-   
+
    ![Create Compute Instance.](./images/createcompute2.png " ")
 
 - Provide the basic information:
-   - Name: Enter a name for your instance.
-   - Compartment: Select the compartment where you want to create the instance.
-   - Placement: Choose the Availability Domain.
+  - Name: Enter a name for your instance.
+  - Compartment: Select the compartment where you want to create the instance.
+  - Placement: Choose the Availability Domain.
 
     ![Create compute instance basic information.](./images/createcompute3.png " ")
 
 - Image and shape:
-   - Image: Select a Linux operating system that is supported by your OpenVPN Access Server release.
+  - Image: Select a Linux operating system that is supported by your OpenVPN Access Server release.
 
-    **Review required:** The screenshot shows CentOS Stream 8. Confirm that the selected image is supported by the OpenVPN Access Server release you plan to install before publishing.
-    
+    **Review required:** The screenshot shows **CentOS Stream 8**. Confirm that the selected image is supported by the OpenVPN Access Server release you plan to install before publishing.
+
     ![Image and shape of compute instance.](./images/createcompute4.png " ")
 
-   - Shape: Click **Change shape** to select the instance type and shape series.
+  - Shape: Click **Change shape** to select the instance type and shape series.
 
     ![Change shape of compute instance.](./images/createcompute5.png " ")
 
     ![Change shape series of compute instance.](./images/createcompute5a.png " ")
 
-- Optionally, enable **Shielded instances**. 
+- Optionally, enable **Shielded instances**.
 
     ![Enable shielded instance.](./images/createcompute6.png " ")
 
 - Networking: Configure the VCN and public subnet. Select **Automatically assign a public IPv4 address** if the instance requires internet access.
-    
+
     ![Configure primary vnic.](./images/createcompute7.png " ")
 
     ![Configure subnet.](./images/createcompute7a.png " ")
@@ -84,11 +84,11 @@ The following illustration shows a network topology that can be used to provide 
     ![Configure Block volumes.](./images/createcompute9a.png " ")
 
 - Review: Click **Create** after reviewing your settings.
-   
+
     ![Submit Compute instance creation.](./images/createcompute10.png " ")
 
 Within a few minutes, your Linux server will be ready with a public IP address for SSH access.
- 
+
 ![List Compute instance.](./images/createcompute11.png " ")
 
 ## Task 2: Install and configure OpenVPN Server
@@ -96,15 +96,15 @@ Within a few minutes, your Linux server will be ready with a public IP address f
 In this task, you install OpenVPN Access Server on the Linux VM, set an administrator password, and configure routing and DNS so VPN clients can reach private subnets, such as the application and Exadata subnets, without routing all internet traffic through the VPN.
 
 - Prerequisites:
-  * You have the public IP address of your Linux VM.
-  * You can SSH to the VM (security list/NSG allows TCP/22 from your source).
-  * Your OpenVPN server VM can reach the internet to download packages.
-  * The security list or network security group allows TCP port 22 only from approved administrator source addresses, TCP port 943 for the OpenVPN web interfaces, and UDP port 1194 for VPN client connections. If you use web-service port sharing, also allow TCP port 443.
-  * You know the CIDR blocks for the private subnets you want to reach over VPN (for example: App subnet CIDR, Exadata subnet CIDR).
+  - You have the public IP address of your Linux VM.
+  - You can SSH to the VM (security list/NSG allows TCP/22 from your source).
+  - Your OpenVPN server VM can reach the internet to download packages.
+  - The security list or network security group allows TCP port 22 only from approved administrator source addresses, TCP port 943 for the OpenVPN web interfaces, and UDP port 1194 for VPN client connections. If you use web-service port sharing, also allow TCP port 443.
+  - You know the CIDR blocks for the private subnets you want to reach over VPN (for example: App subnet CIDR, Exadata subnet CIDR).
 
 - SSH into the Linux VM. From your terminal, connect to the VM using its public IP address:
 
-    ```
+    ```bash
     <copy>
     $ ssh opc@<public_ip_address_of_your_linux_vm>
     </copy>
@@ -127,9 +127,11 @@ In this task, you install OpenVPN Access Server on the Linux VM, set an administ
 - Sign in to the OpenVPN Admin Web UI (port 943).
 
     From your local browser, access the Admin Web UI at `https://<public_ip_address_of_your_linux_vm>:943/admin` and sign in with the `openvpn` user and the password you set.
+
     ![Open VPN Login screen.](./images/openvpn-login.png " ")
 
 - In the Admin Web UI, open the network settings and set the hostname or IP address to the public IP address of the OpenVPN Access Server instance.
+
     ![OpenVPN Network setting.](./images/openvpn-network.png " ")
 
     Save the setting before continuing.
@@ -139,9 +141,9 @@ In this task, you install OpenVPN Access Server on the Linux VM, set an administ
     Configure NAT, split tunneling, and DNS so that VPN clients can reach the private application and Exadata subnets.
 
     In current Access Server releases, use the access-control and VPN-network configuration pages to apply the following settings:
-    - Allow access to only the required application and Exadata subnet CIDR blocks.
-    - Use NAT for client access to these private subnets.
-    - Disable routing of general client internet traffic through the VPN (split tunneling).
+  - Allow access to only the required application and Exadata subnet CIDR blocks.
+  - Use NAT for client access to these private subnets.
+  - Disable routing of general client internet traffic through the VPN (split tunneling).
 
       ![Use VPN NAT.](./images/vpn-nat.png " ")
 
@@ -183,7 +185,7 @@ You can also configure the VPN server for multiple users. Follow the [OpenVPN Ac
 
     ![Launch SQL Developer Web.](./images/atpd-conn.png " ")
 
-- For detailed instructions on downloading database client credentials, see [Configure a Development System](../adb-configure-dev-client/adb-configure-dev-client.md).
+- For detailed instructions on downloading database client credentials, see the lab **Configure a Development System** in the [Autonomous Database Dedicated for Developers and Database Users workshop](https://livelabs.oracle.com/ords/r/dbpm/livelabs/run-workshop?p210_wid=3197).
 
 - If APEX is enabled for the database, you can also connect to it directly from your local browser. Obtain the APEX URL from the OCI Console and open it in a browser window.
 
@@ -199,5 +201,3 @@ You may now **proceed to the next lab**.
 - **Adapted by** -  Vandana Rajamani, Consulting UA Developer, June 2026
 - **Last Updated By/Date** - Vandana Rajamani, Consulting UA Developer, July 2026
 
-## See an issue or have feedback?
-Please submit feedback [here](https://apexapps.oracle.com/pls/apex/f?p=133:1:::::P1_FEEDBACK:1).   Select 'Autonomous DB on Dedicated Exadata' as workshop name, include Lab name and issue / feedback details. Thank you!

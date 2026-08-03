@@ -37,7 +37,7 @@ Before starting this lab, ensure that:
 - DNS and NTP servers are available and reachable.
 - Oracle has installed or is scheduled to install the Exadata Cloud@Customer hardware.
 
-## Task 1: Create the Exadata Cloud@Customer Infrastructure
+## Task 1: Create the Exadata Cloud@Customer Infrastructure {#GUID-098F20C5-F5B8-4F8C-AE25-8EA7DA8DCEEA}
 
 1. Sign in to the OCI Console and Open the Navigation Menu.
 2. Select **Oracle AI Database**. Click **Oracle Exadata Database Service at Cloud@Customer**.
@@ -60,7 +60,7 @@ Before starting this lab, ensure that:
 
 5. Configure Control Plane Networking
 
-   Provide the following details: 
+   Provide the following details:
     - Two Control Plane Server IP Addresses: These IP addresses are for the network interfaces that connect the two control plane servers to your corporate network using the control plane network
     - Netmask: Specify the IP netmask for the control plane network.
     - Gateway: Specify the IP address of the control plane network gateway.
@@ -81,18 +81,17 @@ Before starting this lab, ensure that:
 
     - Time Zone: The default time zone for the Exadata Infrastructure is UTC, but you can specify a different time zone.
 
-7. Click **Create Exadata Infrastructure**:. If all of your inputs are valid, then the Infrastructure Details page appears. The page outlines the next steps in the provisioning process. Initially after creation, the state of the Oracle Exadata infrastructure is Requires-Activation.
+7. Click **Create Exadata Infrastructure**. If all of your inputs are valid, then the Infrastructure Details page appears. The page outlines the next steps in the provisioning process. Initially after creation, the state of the Oracle Exadata infrastructure is Requires-Activation.
 
-## Task 2: Create a VM Cluster Network
+## Task 2: Create a VM Cluster Network {#GUID-5D117FAC-3A12-4763-87EC-F073320CA203}
 
-1. Navigate back to Exadata Cloud@Customer and Select **VM Cluster Networks**.
-2. Click **Create VM Cluster Network**.
-
-   ![Create VMCluster network](./images/crt-exa-vmcluster-1.png " ")
-
-3. Provide General Information like Compartment, Display Name and Exadata Infrastructure
-
-4. Configure Client Network: Provide the following information:
+1. Sign in to the OCI Console and Open the Navigation Menu.
+2. Select **Oracle AI Database**. Click **Oracle Exadata Database Service at Cloud@Customer**.
+3. Click **Exadata Infrastructure**. Click the name of the Exadata infrastructure for which you want to create a VM cluster network.
+4. Click **Create VM Cluster Network**.
+5. Provide General Information like Compartment, Display Name.
+6. Assign IPs to DB servers. By default, all DB servers are assigned IP addresses to enable easy addition and removal of VMs to the cluster in the future. Note that while DB Servers can be added to or removed from the VM Cluster Network, addresses cannot be changed in the future.
+7. Configure Client Network: Provide the following information:
 
     - VLAN ID: Provide a virtual LAN identifier (VLAN ID) for the client network between 1 and 4094, inclusive.
     - CIDR Block: Using CIDR notation, provide the IP address range for the client network. The client network is the primary channel for application connectivity to Exadata Cloud@Customer resources.
@@ -105,7 +104,7 @@ Before starting this lab, ensure that:
 
    ![Configure Client Network](./images/crt-exa-vmcluster-2.png " ")
 
-5. Configure Backup Network: Provide the following information:
+8. Configure Backup Network: Provide the following information:
 
     - VLAN ID: Provide a virtual LAN identifier (VLAN ID) for the backup network between 1 and 4094, inclusive. The backup network is the secondary channel for connectivity to Exadata Cloud@Customer resources. It is typically used to segregate application connections on the client network from other network traffic.
     - CIDR Block: Using CIDR notation, provide the IP address range for the backup network. 
@@ -114,7 +113,7 @@ Before starting this lab, ensure that:
     - Hostname Prefix: Specify the prefix that is used to generate the hostnames in the backup network.
     - Domain Name: Specify the domain name for the backup network.
 
-6. The VM cluster network requires access to Domain Names System (DNS) and Network Time Protocol (NTP) services. The following settings specify the servers that provide these services:
+9. The VM cluster network requires access to Domain Names System (DNS) and Network Time Protocol (NTP) services. The following settings specify the servers that provide these services:
 
     - DNS Servers: Provide the IP address of a DNS server that is accessible using the client network. You may specify up to three DNS servers.
 
@@ -122,11 +121,11 @@ Before starting this lab, ensure that:
 
    Verify that Backup network does not overlap client network and Sufficient IP addresses exist.
 
-7. Click **Review Configuration**. Review generated hostnames and IP allocations. Click **Create VM Cluster Network**.
+10. Click **Review Configuration**. Review generated hostnames and IP allocations. Click **Create VM Cluster Network**.
 
-   The VM Cluster Network Details page is now displayed. Initially after creation, the state of the VM cluster network is Requires Validation
+   The VM Cluster Network Details page is now displayed. Initially after creation, the state of the VM cluster network is **Requires Validation**
 
-## Task 3: Configure a Backup Destination (Optional)
+## Task 3: Configure a Backup Destination (Optional) {#GUID-E1DFA21D-506E-48B9-AD36-B1DC29B3CF1D}
 
 When you create Autonomous AI Databases on Exadata Cloud@Customer, you can specify a backup destination and enable automatic backups. You may chose to backup your databases to one of the following destinations
 
@@ -150,13 +149,13 @@ If you plan to use OCI Object Storage, this task can be skipped.
 
       ![NFS Backup](./images/create-bkp3.png " ")
 
-Click **Create Backup Destination** at the bottom of the page.
+Click **Create** at the bottom of the page.
 
 You are now ready to download your configuration and send it to Oracle for validation and activation.
 
-## Task 4: Download the Infrastructure Configuration Package
+## Task 4: Download the Infrastructure Configuration Package {#GUID-0429DB3F-9D5A-4784-812B-BC01B02544A5}
 
-1. Navigate back to Exadata Cloud@Customer console and select **Exadata Infrastructures**. Select the infrastructure created in Task 1.
+1. Navigate back to Exadata Cloud@Customer console and select **Exadata Infrastructure**. Select the infrastructure created in [Task 1](#GUID-098F20C5-F5B8-4F8C-AE25-8EA7DA8DCEEA).
 
 2. Click **Download Configuration**. Save the generated file securely.
 
@@ -167,19 +166,18 @@ You are now ready to download your configuration and send it to Oracle for valid
     - Do not modify the infrastructure configuration.
     - Submit the file to Oracle exactly as generated.
 
-
-## Task 5: Activate the Exadata Infrastructure
+## Task 5: Activate the Exadata Infrastructure {#GUID-F55EF917-2832-4736-9F27-6A44179F3A14}
 
 Activate the Exadata Infrastructure after Oracle completes validation and provides an activation file.
 
 Verify:
+
 - Oracle completed validation.
 - Activation file has been received.
 - Infrastructure state is Requires Activation.
 
 1. Open Infrastructure Details and Click **Activate**. The Activate button is only available if the Oracle Exadata infrastructure requires activation. You cannot activate Oracle Exadata infrastructure multiple times.
-2. Use the Activate dialog to upload the activation file, and then click Activate Now
-After activation, the state of the Oracle Exadata infrastructure changes to Active.
+2. Use the ****Activate** dialog to upload the activation file, and then click **Activate Now**. After activation, the state of the Oracle Exadata infrastructure changes to **Active**.
 
 ### Troubleshooting
 
@@ -212,10 +210,7 @@ Verify:
 You may now proceed to the next lab: **Create an Autonomous VM Cluster**
 
 ## Acknowledgements
+
 - **Author** - Tejus S. & Kris Bhanushali
 - **Adapted by:** - Vandana Rajamani, Consulting UA Developer, June 2026
 - **Last Updated By/Date** - Vandana Rajamani, Consulting UA Developer, July 2026
-
-## See an issue or have feedback?  
-
-Please submit feedback [here](https://apexapps.oracle.com/pls/apex/f?p=133:1:::::P1_FEEDBACK:1).   Select 'Autonomous DB on Dedicated Exadata' as workshop name, include Lab name and issue / feedback details. Thank you!

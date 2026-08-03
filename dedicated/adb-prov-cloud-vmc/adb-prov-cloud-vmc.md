@@ -22,7 +22,7 @@ Estimated Time: 20 minutes
 *Log in to your OCI account as a fleet administrator.*
 
 - Navigate to the **Oracle AI Database** option in the top left hamburger menu from your OCI home screen. Click **Autonomous AI Database on Dedicated Infrastructure**.
-- Select **Autonomous Exadata VM Cluster** from the menu on the left. Click **Create Autonomous Exadata VM Cluster**.
+- Select **Autonomous Exadata VM Clusters** from the menu on the left. Click **Create Autonomous Exadata VM Cluster**.
 
   ![OCI Navigation Menu for creating AVMC](./images/create-avmc-pc1.png " ")
 
@@ -40,7 +40,7 @@ Estimated Time: 20 minutes
 
             ![create avmc compute model](./images/create-avmc-pc3.png " ") 
 
-        - DB Server Selection: Lists the DB Servers (VMs) used to deploy the new Autonomous Exadata VM Cluster (AVMC) resource. The maximum resources (CPUs, Memory, and Local Storage) available per VM is also displayed. Optionally, you can add or remove the VMs by clicking Edit DB Server Selection. Clicking this button launches the Change DB Servers dialog listing all the available DB Servers. 
+        - DB Server Selection: Lists the DB Servers (VMs) used to deploy the new Autonomous Exadata VM Cluster (AVMC) resource. The maximum resources (CPUs, Memory, and Local Storage) available per VM is also displayed. Optionally, you can add or remove the VMs by clicking **Edit DB Server Selection**. Clicking this button launches the **Change DB Servers** dialog listing all the available DB Servers. 
 
             ![Create avmc dbserver selection](./images/create-avmc-pc3a.png " ")  
 

@@ -6,7 +6,7 @@ Oracle Autonomous AI Database on Dedicated Exadata Infrastructure enables organi
 
 With Autonomous AI Database on Dedicated Exadata Infrastructure, each business unit or project team has the autonomy to manage and deploy its own databases, while the organization benefits from simplified fleet-wide visibility into overall health, availability, and cost management. This clear separation between fleet administration and database administration enables effective budgeting, strong resource isolation, and centralized oversight without limiting the agility of individual teams.
 
-Autonomous AI Database on Dedicated Exadata Infrastructure supports a broad range of workloads—from simple business applications to mission-critical systems that require the highest levels of governance, predictable performance, and operational control.
+Autonomous AI Database on Dedicated Exadata Infrastructure supports a broad range of workloads, from simple business applications to mission-critical systems that require the highest levels of governance, predictable performance, and operational control.
 
 Oracle Autonomous AI Database on Dedicated Infrastructure runs on the Oracle Exadata platform and is available both in Oracle Cloud Infrastructure (OCI) and on-premises through Oracle Cloud@Customer, providing the same autonomous capabilities across Public Cloud and customer data center environments.
 

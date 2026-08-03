@@ -2,18 +2,19 @@
 # Provisioning an Autonomous VM Cluster on Exadata Cloud@Customer
 
 ## Introduction
-Oracle Autonomous AI Database on Oracle Exadata Cloud@Customer delivers the benefits of a self-driving, self-securing, and self-repairing database management systemwhile keeping the database closer to your on-premises applications and securely deployed behind your firewall. Setting up and using Autonomous AI Databases on your Exadata Cloud@Customer consists of two steps:
+
+Oracle Autonomous AI Database on Oracle Exadata Cloud@Customer delivers the benefits of a self-driving, self-securing, and self-repairing database management system while keeping the database closer to your on-premises applications and securely deployed behind your firewall. Setting up and using Autonomous AI Databases on your Exadata Cloud@Customer consists of two steps:
 
 1. **Provision an Exadata Infrastructure**
 
     This step is required regardless of whether you choose to deploy the Autonomous service using Database 19c and later, or a co-managed Exadata Cloud@Customer service using Database 11g and later. To provision an Oracle Exadata Cloud@Customer system, you must work with Oracle to install, configure, and activate the Exadata infrastructure.
 
-    **This step was completed in the previous lab**
+    **This step was completed in the [previous lab](?lab=adb-prov-exacc).**
 
 2. **Provision an Autonomous VM Cluster on your Exadata Infrastructure**
 
     The type of VM Cluster you deploy on your Exadata Infrastructure determines whether the environment is configured for Autonomous AI Database or a co-managed deployment.
-    After your Exadata Infrastructure has been deployed and is in the Available state, you can create an Autonomous VM Cluster to host your Autonomous Container Databases (ACDs).
+    After your Exadata Infrastructure has been deployed and is in the **Available** state, you can create an Autonomous VM Cluster to host your Autonomous Container Databases (ACDs).
 
 **This lab walks you through the steps required to create an Autonomous VM Cluster on your Exadata Cloud@Customer infrastructure.**
 
@@ -21,11 +22,11 @@ Oracle Autonomous AI Database on Oracle Exadata Cloud@Customer delivers the bene
 
 - Create an Autonomous VM Cluster on a pre-provisioned Exadata Cloud@Customer infrastructure.
 
+### Required
 
-### Required Artifacts
 - An Oracle Cloud Infrastructure account with a pre-provisioned instance of Exadata Infrastructure
 
-## Create an Autonomous VM Cluster on your Exadata Cloud@Customer infrastructure.
+## Create an Autonomous VM Cluster on your Exadata Cloud@Customer infrastructure
 
 *Sign in to the OCI Console and Open the Navigation Menu.*.
 
@@ -37,7 +38,7 @@ Select **Autonomous Exadata VM Clusters** from the menu on the left and click **
 
 ![Create Autonomous Exadata VM Cluster](./images/create-avmc-cc2.png " ")
 
-On the **Create Autonomous Exadata VM Cluster** page enter the folowing information
+On the **Create Autonomous Exadata VM Cluster** page enter the following information:
 
 1. **Choose a compartment:** Select the compartment where you want to deploy the Autonomous VM Cluster and enter a display name. 
 
@@ -84,7 +85,7 @@ On the **Create Autonomous Exadata VM Cluster** page enter the folowing informat
 
    ![Advanced Options](./images/create-avmc-cc4a.png " ")
 
-   After completing the configuration, click **Create Autonomous Exadata VM Cluster**
+   After completing the configuration, click **Create**.
 
 Once provisioning is complete, the Autonomous VM Cluster is ready for Autonomous Container Database deployment. You can review resource allocation and utilization details on the Autonomous VM Cluster details page.
 
@@ -97,6 +98,3 @@ You may now **proceed to the next lab**.
 - **Author** - Simon Law, Kris Bhanushali and Ranganath S R
 - **Adapted By/Date** - Vandana Rajamani, Consulting UA Developer, June 2026
 - **Last Updated By/Date** - Vandana Rajamani, Consulting UA Developer, July 2026
-
-## See an issue or have feedback?  
-Please submit feedback [here](https://apexapps.oracle.com/pls/apex/f?p=133:1:::::P1_FEEDBACK:1).   Select 'Autonomous DB on Dedicated Exadata' as workshop name, include Lab name and issue / feedback details. Thank you!
