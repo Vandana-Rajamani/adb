@@ -37,7 +37,7 @@ Before starting this lab, ensure that:
 - DNS and NTP servers are available and reachable.
 - Oracle has installed or is scheduled to install the Exadata Cloud@Customer hardware.
 
-## Task 1: Create the Exadata Cloud@Customer Infrastructure {#GUID-098F20C5-F5B8-4F8C-AE25-8EA7DA8DCEEA}
+## Task 1: Create the Exadata Cloud@Customer Infrastructure 
 
 1. Sign in to the OCI Console and Open the Navigation Menu.
 2. Select **Oracle AI Database**. Click **Oracle Exadata Database Service at Cloud@Customer**.
@@ -83,7 +83,7 @@ Before starting this lab, ensure that:
 
 7. Click **Create Exadata Infrastructure**. If all of your inputs are valid, then the Infrastructure Details page appears. The page outlines the next steps in the provisioning process. Initially after creation, the state of the Oracle Exadata infrastructure is Requires-Activation.
 
-## Task 2: Create a VM Cluster Network {#GUID-5D117FAC-3A12-4763-87EC-F073320CA203}
+## Task 2: Create a VM Cluster Network 
 
 1. Sign in to the OCI Console and Open the Navigation Menu.
 2. Select **Oracle AI Database**. Click **Oracle Exadata Database Service at Cloud@Customer**.
@@ -125,7 +125,7 @@ Before starting this lab, ensure that:
 
    The VM Cluster Network Details page is now displayed. Initially after creation, the state of the VM cluster network is **Requires Validation**
 
-## Task 3: Configure a Backup Destination (Optional) {#GUID-E1DFA21D-506E-48B9-AD36-B1DC29B3CF1D}
+## Task 3: Configure a Backup Destination (Optional) 
 
 When you create Autonomous AI Databases on Exadata Cloud@Customer, you can specify a backup destination and enable automatic backups. You may chose to backup your databases to one of the following destinations
 
@@ -153,9 +153,9 @@ Click **Create** at the bottom of the page.
 
 You are now ready to download your configuration and send it to Oracle for validation and activation.
 
-## Task 4: Download the Infrastructure Configuration Package {#GUID-0429DB3F-9D5A-4784-812B-BC01B02544A5}
+## Task 4: Download the Infrastructure Configuration Package 
 
-1. Navigate back to Exadata Cloud@Customer console and select **Exadata Infrastructure**. Select the infrastructure created in [Task 1](#GUID-098F20C5-F5B8-4F8C-AE25-8EA7DA8DCEEA).
+1. Navigate back to Exadata Cloud@Customer console and select **Exadata Infrastructure**. Select the infrastructure created in **Task 1**.
 
 2. Click **Download Configuration**. Save the generated file securely.
 
