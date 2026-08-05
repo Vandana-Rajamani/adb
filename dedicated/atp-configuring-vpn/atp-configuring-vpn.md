@@ -44,22 +44,20 @@ The following illustration shows a network topology that can be used to provide 
    ![Create Compute Instance.](./images/createcompute2.png " ")
 
 - Provide the basic information:
-
-  - Name: Enter a name for your instance.
-  - Compartment: Select the compartment where you want to create the instance.
-  - Placement: Choose the Availability Domain.
+    - Name: Enter a name for your instance.
+    - Compartment: Select the compartment where you want to create the instance.
+    - Placement: Choose the Availability Domain.
 
     ![Create compute instance basic information.](./images/createcompute3.png " ")
 
 - Image and shape:
-
-  - Image: Select a Linux operating system that is supported by your OpenVPN Access Server release.
+    - Image: Select a Linux operating system that is supported by your OpenVPN Access Server release.
 
     **Review required:** The screenshot shows **CentOS Stream 8**. Confirm that the selected image is supported by the OpenVPN Access Server release you plan to install before publishing.
 
     ![Image and shape of compute instance.](./images/createcompute4.png " ")
 
-  - Shape: Click **Change shape** to select the instance type and shape series.
+    - Shape: Click **Change shape** to select the instance type and shape series.
 
     ![Change shape of compute instance.](./images/createcompute5.png " ")
 
@@ -98,12 +96,11 @@ Within a few minutes, your Linux server will be ready with a public IP address f
 In this task, you install OpenVPN Access Server on the Linux VM, set an administrator password, and configure routing and DNS so VPN clients can reach private subnets, such as the application and Exadata subnets, without routing all internet traffic through the VPN.
 
 - Prerequisites:
-
-  - You have the public IP address of your Linux VM.
-  - You can SSH to the VM (security list/NSG allows TCP/22 from your source).
-  - Your OpenVPN server VM can reach the internet to download packages.
-  - The security list or network security group allows TCP port 22 only from approved administrator source addresses, TCP port 943 for the OpenVPN web interfaces, and UDP port 1194 for VPN client connections. If you use web-service port sharing, also allow TCP port 443.
-  - You know the CIDR blocks for the private subnets you want to reach over VPN (for example: App subnet CIDR, Exadata subnet CIDR).
+    - You have the public IP address of your Linux VM.
+    - You can SSH to the VM (security list/NSG allows TCP/22 from your source).
+    - Your OpenVPN server VM can reach the internet to download packages.
+    - The security list or network security group allows TCP port 22 only from approved administrator source addresses, TCP port 943 for the OpenVPN web interfaces, and UDP port 1194 for VPN client connections. If you use web-service port sharing, also allow TCP port 443.
+    - You know the CIDR blocks for the private subnets you want to reach over VPN (for example: App subnet CIDR, Exadata subnet CIDR).
 
 - SSH into the Linux VM. From your terminal, connect to the VM using its public IP address:
 

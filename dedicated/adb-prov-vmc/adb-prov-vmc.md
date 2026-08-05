@@ -50,11 +50,11 @@ On the **Create Autonomous Exadata VM Cluster** page enter the following informa
 
 4. **Configure the Autonomous VM Cluster Resources:**
 
-    - Compute model: The default compute model is ECPU, which allocates compute resources elastically from the shared pool of Exadata database and storage servers. To use OCPU instead, click Change Compute Model. The OCPU model is based on physical processor cores with hyper-threading enabled.
+    - Compute model: The default compute model is ECPU, which allocates compute resources elastically from the shared pool of Exadata database and storage servers. To use OCPU instead, click **Change Compute Model**. The OCPU model is based on physical processor cores with hyper-threading enabled.
 
         ![Compute model](./images/create-avmc-cc3a.png " ")
 
-    - DB Server Selection: By default, all database servers that meet the minimum resource requirements are selected. To add or remove database servers, click Edit DB Server Selection. This opens the Change DB Servers dialog, where you can review and select from the available database servers.
+    - DB Server Selection: By default, all database servers that meet the minimum resource requirements are selected. To add or remove database servers, click **Edit DB Server Selection**. This opens the **Change DB Servers** dialog, where you can review and select from the available database servers.
 
         ![DB Server Selection](./images/create-avmc-cc4.png " ")
 
@@ -69,7 +69,7 @@ On the **Create Autonomous Exadata VM Cluster** page enter the following informa
 
     - Database storage(TB): Specify the storage capacity available for Autonomous Database creation within the Autonomous VM Cluster.
 
-5. **Configure Automatic Maintenance:** Optionally, customize the maintenance schedule by clicking Modify Schedule. By default, the schedule is set to **No Preference**, allowing Oracle to perform maintenance when required.
+5. **Configure Automatic Maintenance:** Optionally, customize the maintenance schedule by clicking **Modify Schedule**. By default, the schedule is set to **No Preference**, allowing Oracle to perform maintenance when required.
 
    To define a custom schedule:
 

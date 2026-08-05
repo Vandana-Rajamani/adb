@@ -83,7 +83,7 @@ Before starting this lab, ensure that:
 
 7. Click **Create Exadata Infrastructure**. If all of your inputs are valid, then the Infrastructure Details page appears. The page outlines the next steps in the provisioning process. Initially after creation, the state of the Oracle Exadata infrastructure is Requires-Activation.
 
-## Task 2: Create a VM Cluster Network 
+## Task 2: Create a VM Cluster Network
 
 1. Sign in to the OCI Console and Open the Navigation Menu.
 2. Select **Oracle AI Database**. Click **Oracle Exadata Database Service at Cloud@Customer**.
@@ -166,7 +166,7 @@ You are now ready to download your configuration and send it to Oracle for valid
     - Do not modify the infrastructure configuration.
     - Submit the file to Oracle exactly as generated.
 
-## Task 5: Activate the Exadata Infrastructure {#GUID-F55EF917-2832-4736-9F27-6A44179F3A14}
+## Task 5: Activate the Exadata Infrastructure
 
 Activate the Exadata Infrastructure after Oracle completes validation and provides an activation file.
 
@@ -212,5 +212,5 @@ You may now proceed to the next lab: **Create an Autonomous VM Cluster**
 ## Acknowledgements
 
 - **Author** - Tejus S. & Kris Bhanushali
-- **Adapted by:** - Vandana Rajamani, Consulting UA Developer, June 2026
+- **Adapted by** - Vandana Rajamani, Consulting UA Developer, June 2026
 - **Last Updated By/Date** - Vandana Rajamani, Consulting UA Developer, July 2026

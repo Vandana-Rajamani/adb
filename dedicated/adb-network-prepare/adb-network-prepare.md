@@ -53,7 +53,7 @@ You will use the following IAM structure in line with the bare minimum isolation
     ![This image shows the result of performing the above step for creating fleetadmin group](./images/create-grp-fleetadmins.png " ")
     ![This image shows the result of performing the above step for creating dbUsers group](./images/create-grp-dbusers.png " ")
 
-3. Now add the required IAM policies for the compartments you created. In the OCI Console navigation menu, select **Identity & Security**, then **Policies**. Click **Create policy**, enter the required information, and then click **Create**.
+3. Now add the required IAM policies for the compartments you created. In the OCI Console navigation menu, select **Identity & Security**, then **Policies**. Click **Create Policy**, enter the required information, and then click **Create**.
 
     ![This image shows the result of performing the above step for creating policies](./images/create-policy1.png " ")
 
@@ -78,7 +78,7 @@ You will use the following IAM structure in line with the bare minimum isolation
         ```
    ![This image shows the result of performing the above step for creating the fleetAdminpolicy](./images/create-fleetadminpolicy.png " ")
 
-4. Similarly, create a **dbUserPolicy** for the **dbUserCompartment** as shown. *Ensure that you select the correct compartment before clicking **Create policy**.*
+4. Similarly, create a **dbUserPolicy** for the **dbUserCompartment** as shown. Ensure that you select the correct compartment before clicking **Create Policy**.
 
     **Note:** The assumption here is that the DB user will need to create other resources such as network, compute instances, storage buckets, and more, in their own compartment. This is highly dependent on a customer's individual requirement and can be configured in many different ways.
 

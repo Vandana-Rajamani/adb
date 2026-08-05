@@ -14,7 +14,7 @@ As a fleet administrator:
 
 ### Required Artifacts
 
-- An Oracle Cloud Infrastructure account with fleet administrator privileges. For a detailed description of required IAM policies, please refer to the [documentation on IAM policies](https://docs.oracle.com/en/cloud/paas/autonomous-database/adbdf/) in the Autonomous AI Database Dedicated documentation set.
+- An Oracle Cloud Infrastructure account with fleet administrator privileges. For a detailed description of required IAM policies, please refer to the [documentation on IAM policies](https://docs.oracle.com/en/cloud/paas/autonomous-database/adbdf/) for Autonomous AI Database.
 
 ## Task 1: Create an Autonomous Container Database (ACD)
 
@@ -47,9 +47,8 @@ As a fleet administrator:
   ![Change Maintenance schedule.](./images/create-acd3b.png " ")
 
 - By default, automatic backups are enabled for an ACD. Optionally, you can choose to disable them by deselecting the Enable automatic backups check box. When you enable automatic backups, choose from the following options to determine how long backups are retained after terminating the ACD:
-
-  - Retain backups as per the backup retention period
-  - Retain backups for 72 hours, then delete
+    - Retain backups as per the backup retention period
+    - Retain backups for 72 hours, then delete
 
 - You can associate a backup destination for the backups of Autonomous AI Databases created in an ACD. You can choose **Object Storage** or **Autonomous Recovery Service** (recommended option) as the backup destination for Autonomous AI Databases deployed On Oracle Public Cloud.  If creating the Autonomous Container Database on Exadata Cloud@Customer, configure the backup destination to be used for backups of Autonomous AI Databases created in the Autonomous Container Database. Select a Backup Destination Type and then specify options based on the selected type.
 
