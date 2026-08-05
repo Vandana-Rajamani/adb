@@ -1,10 +1,10 @@
-# Connecting to Autonomous AI Database on Dedicated Exadata Infrastructure from Oracle Enterprise Manager
+# Connect to Autonomous AI Database on Dedicated Exadata Infrastructure from Oracle Enterprise Manager
 
 ## Introduction
 
-Oracle Cloud Infrastructure Marketplace provides a prebuilt image with the necessary client tools and drivers to deploy compute instances and connect to Autonomous AI Database on Dedicated Exadata Infrastructure from Oracle Enterprise Manager. Oracle Enterprise Manager is a complete, integrated, business-driven management solution for traditional and cloud environments. It takes advantage of the built-in management capabilities of the Oracle stack and enables monitoring and management of your entire infrastructure from a single console. A database administrator can use Oracle Enterprise Manager to connect to an Autonomous AI Database and monitor its performance.
+Oracle Cloud Infrastructure Marketplace provides a prebuilt image with the necessary client tools and drivers to deploy compute instances and connect to Autonomous AI Database on Dedicated Exadata Infrastructure (Autonomous AI Database) from Oracle Enterprise Manager. Oracle Enterprise Manager is a complete, integrated, business-driven management solution for traditional and cloud environments. It takes advantage of the built-in management capabilities of the Oracle stack and enables monitoring and management of your entire infrastructure from a single console. A database administrator can use Oracle Enterprise Manager to connect to an Autonomous AI Database and monitor its performance.
 
-*In this lab, you will configure access to an Autonomous AI Database  on Oracle Dedicated Autonomous Infrastructure from Oracle Enterprise Manager.*
+*In this lab, you will configure access to an Autonomous AI Database from Oracle Enterprise Manager.*
 
 Estimated Time: 60 minutes
 
@@ -12,7 +12,7 @@ Estimated Time: 60 minutes
 
 As a database administrator:
 
-1. Learn how to connect an Autonomous AI Database on Dedicated Exadata Infrastructure to Oracle Enterprise Manager.
+1. Learn how to connect an Autonomous AI Database to Oracle Enterprise Manager.
 
 ### Required Artifacts
 
@@ -201,9 +201,6 @@ You may now **proceed to the next lab**.
 ## Acknowledgements
 
 - **Authors** - Navya M S & Padma Priya Natarajan
-- **Adapted by - Vandana Rajamani, Consulting UA Developer, July 2026
+- **Adapted by** - Vandana Rajamani, Consulting UA Developer, July 2026
 - **Last Updated By/Date** - Vandana Rajamani, Consulting UA Developer, July 2026
 
-## See an issue or have feedback?
-
-Please submit feedback [here](https://apexapps.oracle.com/pls/apex/f?p=133:1:::::P1_FEEDBACK:1).   Select 'Autonomous DB on Dedicated Exadata' as workshop name, include Lab name and issue / feedback details. Thank you!

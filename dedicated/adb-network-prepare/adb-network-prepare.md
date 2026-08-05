@@ -1,5 +1,5 @@
 
-# Preparing your private network in the Oracle Cloud Infrastructure
+# Prepare your private network in the Oracle Cloud Infrastructure
 
 ## Introduction
 

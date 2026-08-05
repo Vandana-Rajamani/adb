@@ -1,4 +1,4 @@
-# Configuring VPN Connectivity to Your Private Autonomous AI Database Network
+# Configure VPN Connectivity to Your Private Autonomous AI Database Network
 
 ## Introduction
 
@@ -44,6 +44,7 @@ The following illustration shows a network topology that can be used to provide 
    ![Create Compute Instance.](./images/createcompute2.png " ")
 
 - Provide the basic information:
+
   - Name: Enter a name for your instance.
   - Compartment: Select the compartment where you want to create the instance.
   - Placement: Choose the Availability Domain.
@@ -51,6 +52,7 @@ The following illustration shows a network topology that can be used to provide 
     ![Create compute instance basic information.](./images/createcompute3.png " ")
 
 - Image and shape:
+
   - Image: Select a Linux operating system that is supported by your OpenVPN Access Server release.
 
     **Review required:** The screenshot shows **CentOS Stream 8**. Confirm that the selected image is supported by the OpenVPN Access Server release you plan to install before publishing.
@@ -143,9 +145,9 @@ In this task, you install OpenVPN Access Server on the Linux VM, set an administ
 
     In current Access Server releases, use the access-control and VPN-network configuration pages to apply the following settings:
 
-    - Allow access to only the required application and Exadata subnet CIDR blocks.
-    - Use NAT for client access to these private subnets.
-    - Disable routing of general client internet traffic through the VPN (split tunneling).
+     - Allow access to only the required application and Exadata subnet CIDR blocks.
+     - Use NAT for client access to these private subnets.
+     - Disable routing of general client internet traffic through the VPN (split tunneling).
 
        ![Use VPN NAT.](./images/vpn-nat.png " ")
 

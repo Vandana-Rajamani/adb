@@ -1,10 +1,10 @@
-# Oracle Standard Tags
+# Use Oracle Standard Tags
 
 ## Introduction
 
 Oracle Cloud Infrastructure tagging allows you to add metadata to resources, defining keys and values and associating them with resources. You can use the tags to organize and list resources based on your business needs.
 
-To enable customers to manage OCI resources securely and cost-effectively, Oracle provides a set of pre-defined tags in line with best practices for tagging resources. These tags are grouped into two namespaces - The **OracleStandard** namespace and the **OracleApplicationName** namespace.
+To enable customers to manage OCI resources securely and cost-effectively, Oracle provides a set of pre-defined tags in line with best practices for tagging resources. These tags are grouped into two namespaces - the **OracleStandard** namespace and the **OracleApplicationName** namespace.
 
 This lab walks you through the steps to import Oracle Standard Tags into your tenancy, create and edit tag key definitions, and use the standard tags with your Autonomous AI Database.
 
@@ -109,7 +109,3 @@ You may now **proceed to the next lab**.
 - **Author** - Tejus S, Autonomous AI Database Product Management
 - **Adapted by** -  Vandana Rajamani, Consulting UA Developer, July 2026
 - **Last Updated By/Date** - Vandana Rajamani, Consulting UA Developer, July 2026
-
-## See an issue or have feedback?  
-
-Please submit feedback [here](https://apexapps.oracle.com/pls/apex/f?p=133:1:::::P1_FEEDBACK:1).   Select 'Autonomous DB on Dedicated Exadata' as workshop name, include Lab name and issue / feedback details. Thank you!

@@ -4,7 +4,7 @@
 
 Use Automatic Workload Repository (AWR) to automate database statistics gathering and to collect, process, and maintain performance statistics for database problem detection and self-tuning.
 
-*In this lab, you will use Oracle Enterprise Manager to generate, review, and compare AWR reports for your Autonomous AI Database on Dedicated Exadata Infrastructure.*
+*In this lab, you will use Oracle Enterprise Manager to generate, review, and compare AWR reports for your Autonomous AI Database on Dedicated Exadata Infrastructure (Autonomous AI Database).*
 
 Estimated Time: 20 minutes
 
@@ -12,7 +12,7 @@ Estimated Time: 20 minutes
 
 As a database administrator:
 
-1. Learn how to generate an AWR report for an Autonomous AI Database on Dedicated Exadata Infrastructure from Oracle Enterprise Manager.
+1. Learn how to generate an AWR report for an Autonomous AI Database from Oracle Enterprise Manager.
 2. Learn how to change the AWR retention period for reports generated for that instance.
 3. Compare two AWR reports taken at different intervals by using Oracle Enterprise Manager.
 
@@ -22,7 +22,7 @@ As a database administrator:
 - A pre-provisioned Autonomous Database Dedicated instance. Refer to [Provisioning Databases](https://livelabs.oracle.com/ords/r/dbpm/livelabs/run-workshop?p210_wid=3197) lab for details.
 - Successful connection of the Autonomous Database Dedicated instance from Oracle Enterprise Manager. Refer the previous lab [Connecting to Autonomous AI Database from Oracle Enterprise Manager](?lab=adb-deploy-oem) for details.
 
-## Task 1: Generate an AWR report for an Autonomous AI Database on Dedicated Exadata Infrastructure from Oracle Enterprise Manager
+## Task 1: Generate an AWR report for an Autonomous AI Database from Oracle Enterprise Manager
 
 - Sign in to Oracle Enterprise Manager as the **sysman** user.
 
@@ -89,9 +89,6 @@ You may now **proceed to the next lab**.
 ## Acknowledgements
 
 - **Authors** - Navya M S & Padma Priya Natarajan
-- **Adapted by - Vandana Rajamani, Consulting UA Developer, July 2026
+- **Adapted by** - Vandana Rajamani, Consulting UA Developer, July 2026
 - **Last Updated By/Date** - Vandana Rajamani, Consulting UA Developer, July 2026
 
-## See an issue or have feedback?
-
-Please submit feedback [here](https://apexapps.oracle.com/pls/apex/f?p=133:1:::::P1_FEEDBACK:1).   Select 'Autonomous DB on Dedicated Exadata' as workshop name, include Lab name and issue / feedback details. Thank you!

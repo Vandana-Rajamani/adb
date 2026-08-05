@@ -1,4 +1,4 @@
-# Migrating to Autonomous AI Database on Dedicated Exadata Infrastructure using Data Pump
+# Migrate to Autonomous AI Database on Dedicated Exadata Infrastructure using Data Pump
 
 ## Introduction
 

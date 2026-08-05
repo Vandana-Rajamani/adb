@@ -1,4 +1,4 @@
-# Oracle Operator Access Control
+# Manage Operator Access Control
 
 ## Introduction
 
@@ -40,9 +40,10 @@ allow service operatoraccesscontrol to inspect database-family in tenancy
   ![Information to create operator control.](./images/opecontrol-3.png)
 
   NOTE: In the Approval Requirements section, select the option that best matches the access you want to grant to the operator.
-  1. Pre-Approve All Actions: This mode automatically approves access requests from Oracle Operators to perform system maintenance.
-  2. Select Actions to Pre-Approve: This mode lets you choose the specific actions you want to grant to Oracle Operators. Select the pre-approved actions from the drop-down list.
-  3. Select Groups: Choose the groups whose members can approve or revoke Oracle Operator maintenance requests.
+
+   1. Pre-Approve All Actions: This mode automatically approves access requests from Oracle Operators to perform system maintenance.
+   2. Select Actions to Pre-Approve: This mode lets you choose the specific actions you want to grant to Oracle Operators. Select the pre-approved actions from the drop-down list.
+   3. Select Groups: Choose the groups whose members can approve or revoke Oracle Operator maintenance requests.
   You can also provide a message to Oracle Operators that will be displayed when an access request is made.
 
   Click Create to create the Operator Control.
@@ -155,8 +156,4 @@ You can view the details of any existing logs.
 ## Acknowledgements
 
 - **Author** - Tejus S, Autonomous AI Database Product Management
-- **Last Updated By/Date** -  Vandana Rajamani, Consulting UA Developer, July 2026
-
-## See an issue or have feedback?  
-
-Please submit feedback [here](https://apexapps.oracle.com/pls/apex/f?p=133:1:::::P1_FEEDBACK:1).   Select 'Autonomous DB on Dedicated Exadata' as workshop name, include Lab name and issue / feedback details. Thank you!
+- **Last Updated By/Date** - Vandana Rajamani, Consulting UA Developer, July 2026
