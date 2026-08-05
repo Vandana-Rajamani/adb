@@ -2,7 +2,7 @@
 
 ## Introduction
 
-In this hands-on workshop, you will learn how to monitor and manage Oracle Database@AWS workloads using familiar AWS native services. You'll explore how Oracle Autonomous Database metrics are automatically integrated with Amazon CloudWatch, enabling you to visualize database performance, build custom monitoring dashboards, and configure proactive alarms to quickly identify operational issues.
+In this hands-on workshop, you will learn how to monitor and manage Oracle Database@AWS workloads using familiar AWS native services. You'll explore how Oracle Autonomous AI Database metrics are automatically integrated with Amazon CloudWatch, enabling you to visualize database performance, build custom monitoring dashboards, and configure proactive alarms to quickly identify operational issues.
 
 The workshop also demonstrates how to capture Oracle Database lifecycle events using Amazon EventBridge, allowing you to build event-driven workflows and automate operational responses using the AWS services you already use.
 
@@ -12,7 +12,7 @@ This workshop is designed for cloud engineers, database administrators, and DevO
 
 Estimated Time: 30 minutes
 
-## Task 1: Exploring Database Metrics in AWS CloudWatch
+## Task 1: Explore Database Metrics in AWS CloudWatch
 
 Oracle Database@AWS automatically publishes a rich set of performance and health metrics directly to AWS CloudWatch. This allows you to monitor your database using the same tools you use for the rest of your AWS infrastructure. In this task, you'll learn how to find and analyze these metrics.
 
@@ -46,7 +46,7 @@ Oracle Database@AWS automatically publishes a rich set of performance and health
 
     ![CPU Utilization with different granularity](./images/explore-metrics-8.png " ")
 
-## Task 2: Visualizing Performance with CloudWatch Dashboards
+## Task 2: Visualize Performance with CloudWatch Dashboards
 
 While viewing individual metrics is useful, a dashboard provides a consolidated, at-a-glance view of your database's health. In this task, you will create a custom CloudWatch Dashboard to monitor the most important metrics for your database.
 
@@ -86,8 +86,8 @@ While viewing individual metrics is useful, a dashboard provides a consolidated,
 
    ![View Dashboard](./images/visualize-perf-8.png " ")
 
-## Task 3: Proactive Monitoring with CloudWatch Alarms
- 
+## Task 3: Monitor Proactively with CloudWatch Alarms
+
 Dashboards are great for observing performance, but alarms are essential for proactive management. CloudWatch Alarms can automatically notify you when a metric crosses a defined threshold, allowing you to respond to potential issues before they impact users.
 
 ### Steps
@@ -128,9 +128,9 @@ Dashboards are great for observing performance, but alarms are essential for pro
 
    ![Lower Alarm threshold](./images/proactive-monitor-12.png " ")
 
-## Task 4: Capturing Events with Amazon EventBridge and CloudWatch Logs
+## Task 4: Capture Events with Amazon EventBridge and CloudWatch Logs
 
-Beyond metrics, your database emits important lifecycle and state-change events. Oracle Database@AWS sends these events to **Amazon EventBridge**, allowing you to build event-driven automations. A common use case is to log all events for auditing and analysis.
+Beyond metrics, your database emits important lifecycle and state-change events. Oracle Database@AWS sends these events to **Amazon EventBridge**, allowing you to build event-driven automation. A common use case is to log all events for auditing and analysis.
 
 ### Steps
 
@@ -174,5 +174,4 @@ Beyond metrics, your database emits important lifecycle and state-change events.
 
 - **Author**: - German Viscuso, Director of Developer Community, Autonomous AI Database
 - **Adapted By**: Vandana Rajamani, Consulting UA Developer, July 2026
-- **Last Updated By/Date**: - Vandana Rajamani, Consulting UA Developer, July 2026
-
+- **Last Updated By/Date**: - Vandana Rajamani, Consulting UA Developer, August 2026
