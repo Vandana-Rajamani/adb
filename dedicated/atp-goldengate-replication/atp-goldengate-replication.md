@@ -43,7 +43,7 @@ Before you begin, complete the earlier lab steps for:
 - Search for **Oracle GoldenGate for Oracle**. The image is a terraform orchestration that deploys GoldenGate on a compute image along with required resources. Select the image and deploy it to your compartment.
 - Launch the stack. Provide a name and choose the VCN and subnet to be used .
 - Click **Next**. For instance details, Select an Availability Domain (AD) with sufficient compute capacity.
-- Enable **Assign public IP**.
+- Enable **Assign Public IP**.
 - Under **Create OGG Deployment**, choose **Deployment - Autonomous AI Database**.
 - Select your deployment compartment and Autonomous AI Database instance.
 - Paste your SSH public key and click **Create**.
@@ -180,7 +180,7 @@ cat ogg-credentials.json
 
 - Open a browser to:
 
-   ```text
+   ```
    https://<GG_PUBLIC_IP>
    ```
 
@@ -238,15 +238,12 @@ cat ogg-credentials.json
 
    ![Goldengate Admin console](./images/extract1.png)
 
-- Create an **Integrated Extract** process.
-   
-   Enter:
-
-  - Process Name: Give a descriptive name
-  - Credential Domain: `OracleGoldenGate`
-  - Credential Alias: Pick the common user alias for source database. For example, sourceCommonUser
-  - Begin: Now
-  - Trail Name: Any two character name. For example, `rt`
+- Create an **Integrated Extract** process. Enter:
+    - Process Name: Give a descriptive name
+    - Credential Domain: `OracleGoldenGate`
+    - Credential Alias: Pick the common user alias for source database. For example, sourceCommonUser
+    - Begin: Now
+    - Trail Name: Any two character name. For example, `rt`
 
    ![Create Integrated extract process](./images/extract2.png)
 
@@ -275,11 +272,11 @@ cat ogg-credentials.json
 
 - Enter:
 
-  - Process Name: `Rep1`
-  - Credential Domain: `OracleGoldenGate`
-  - Credential Alias: target ggadmin alias ((or the alias name you provided for ggadmin user on your Autonomous AI Database instance))
-  - Trail Name: Any two character name. For example, `rt`
-  - Checkpoint Table: target ggadmin checkpoint table
+    - Process Name: `Rep1`
+    - Credential Domain: `OracleGoldenGate`
+    - Credential Alias: target ggadmin alias ((or the alias name you provided for ggadmin user on your Autonomous AI Database instance))
+    - Trail Name: Any two character name. For example, `rt`
+    - Checkpoint Table: target ggadmin checkpoint table
 
    ![Details for adding replicat](./images/replicat2.png)
 
@@ -287,7 +284,6 @@ cat ogg-credentials.json
 - Click **Create and Run**.
 
    ![Create Replicat](./images/replicat3.png)
-
 
 ### 4.10 Verify replication
 
@@ -323,5 +319,3 @@ You may now **proceed to the next lab**.
 - **Author** - Tejus S. & Kris Bhanushali
 - **Adapted by** - Vandana Rajamani, Consulting UA Developer, July 2026
 - **Last Updated By/Date** - Vandana Rajamani, Consulting UA Developer, July 2026
-
-

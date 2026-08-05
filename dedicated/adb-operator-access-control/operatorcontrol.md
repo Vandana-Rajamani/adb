@@ -41,10 +41,11 @@ allow service operatoraccesscontrol to inspect database-family in tenancy
 
   NOTE: In the Approval Requirements section, select the option that best matches the access you want to grant to the operator.
 
-   1. Pre-Approve All Actions: This mode automatically approves access requests from Oracle Operators to perform system maintenance.
-   2. Select Actions to Pre-Approve: This mode lets you choose the specific actions you want to grant to Oracle Operators. Select the pre-approved actions from the drop-down list.
-   3. Select Groups: Choose the groups whose members can approve or revoke Oracle Operator maintenance requests.
-  You can also provide a message to Oracle Operators that will be displayed when an access request is made.
+    1. Pre-Approve All Actions: This mode automatically approves access requests from Oracle Operators to perform system maintenance.
+    2. Select Actions to Pre-Approve: This mode lets you choose the specific actions you want to grant to Oracle Operators. Select the pre-approved actions from the drop-down list.
+    3. Select Groups: Choose the groups whose members can approve or revoke Oracle Operator maintenance requests.
+  
+You can also provide a message to Oracle Operators that will be displayed when an access request is made.
 
   Click Create to create the Operator Control.
 

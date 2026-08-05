@@ -110,11 +110,11 @@ You can set up Oracle Enterprise Manager on OCI using images available in OCI Ma
     ![Choose Autonomous AI Database.](./images/add-adbd-5.png " ")
 
 - Enter the following details: 
-  - Enter the target name **ADBEM** (you can use any name you prefer).
-  - Select **OCI Client Credential (Wallet)** as the wallet downloaded from the console.
-  - Select the service name **<ATPD_Name>_low**.
-  - Enter the monitoring username **ADMIN**.
-  - Enter the monitoring password that you used for the wallet download.
+    - Enter the target name **ADBEM** (you can use any name you prefer).
+    - Select **OCI Client Credential (Wallet)** as the wallet downloaded from the console.
+    - Select the service name **<ATPD_Name>_low**.
+    - Enter the monitoring username **ADMIN**.
+    - Enter the monitoring password that you used for the wallet download.
 
     ![Add Database instance](./images/add-adbd-6.png " ")
 
