@@ -86,6 +86,8 @@ While viewing individual metrics is useful, a dashboard provides a consolidated,
 
    ![View Dashboard](./images/visualize-perf-8.png " ")
 
+   **Note**: You can change the time granularity in the graph (eg. 12h, 1d, etc.)
+
 ## Task 3: Monitor Proactively with CloudWatch Alarms
 
 Dashboards are great for observing performance, but alarms are essential for proactive management. CloudWatch Alarms can automatically notify you when a metric crosses a defined threshold, allowing you to respond to potential issues before they impact users.
@@ -94,7 +96,7 @@ Dashboards are great for observing performance, but alarms are essential for pro
 
 1. Select a metric to create an alarm for (e.g., **CPUUtilization**).
 
-   Perform Steps 1 to 5 in [Task 1](#task-1-exploring-database-metrics-in-aws-cloudwatch) above and then click on the **Create alarm** button.
+   Perform Steps 1 to 5 in [Task 1](#task-1-explore-database-metrics-in-aws-cloudwatch) above and then click on the **Create alarm** button.
 
    ![Select a metric](./images/proactive-monitor-1.png " ")
 
