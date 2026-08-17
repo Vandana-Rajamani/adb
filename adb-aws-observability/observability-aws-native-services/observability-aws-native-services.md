@@ -130,48 +130,6 @@ Dashboards are great for observing performance, but alarms are essential for pro
 
    ![Lower Alarm threshold](./images/proactive-monitor-12.png " ")
 
-## Task 4: Capture Events with Amazon EventBridge and CloudWatch Logs
-
-Beyond metrics, your database emits important lifecycle and state-change events. Oracle Database@AWS sends these events to **Amazon EventBridge**, allowing you to build event-driven automation. A common use case is to log all events for auditing and analysis.
-
-### Steps
-
-1. Navigate to the **Amazon EventBridge** service.
-
-   ![Go to Amazon EventBridge Service.](./images/capture-events-1.png " ")
-
-   ![Click EventBridge Rule](./images/capture-events-2.png " ")
-
-2. Create a new rule that listens for events from the `odb` event bus.
-
-   ![Create a new rule](./images/capture-events-3.png " ")
-
-3. Define an event pattern to capture all events from your database.
-
-   ![Build event pattern](./images/capture-events-6.png " ")
-
-   Select `AWS services`, `Oracle Database@AWS` and `All Events` in the drop downs. Click on `Edit pattern`.
-
-   ![Choose Pattern form](./images/capture-events-7.png " ")
-
-   Enter a custom event pattern in JSON format with the same event bus and the autonomous database service prefix (`com.oraclecloud.databaseservice.autonomous`)
-
-   ![Choose custom pattern](./images/capture-events-4.png " ")
-
-4. Configure **AWS CloudWatch Logs** as the target for the rule (here we create a new log group but you can also choose an existing one if available).
-
-   ![Select targets](./images/capture-events-5.png " ")
-
-   ![Configure tags](./images/capture-events-8.png " ")
-
-   The final screen before rule creation should look like this:
-
-   ![Create rule](./images/capture-events-9.png " ")
-
-   ![List rules](./images/capture-events-10.png " ")
-
-5. (Optional) Perform an action on your database (e.g., stop and start it) and verify that the corresponding events appear in your CloudWatch Log stream.
-
 ## Acknowledgements
 
 - **Author**: - German Viscuso, Director of Developer Community, Autonomous AI Database
