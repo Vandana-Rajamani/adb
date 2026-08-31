@@ -54,7 +54,7 @@ Before starting this lab, ensure that:
     - Exadata System Model
     - Shape
 
-   Verify the selected model and shape match the installed rack configuration.
+   Verify the selected model and shape match the installed rack configuration. The Oracle Exadata system model and system shape combine to define the amount of CPU, memory, and storage resources that are available in the Exadata infrastructure.
 
    ![Exadata basic information](./images/prov-exainfra-exacc-3.png " ")
 
@@ -125,7 +125,7 @@ Before starting this lab, ensure that:
 
    The VM Cluster Network Details page is now displayed. Initially after creation, the state of the VM cluster network is **Requires Validation**
 
-## Task 3: Configure a Backup Destination (Optional) 
+## Task 3: Configure a Backup Destination (Optional)
 
 When you create Autonomous AI Databases on Exadata Cloud@Customer, you can specify a backup destination and enable automatic backups. You may chose to backup your databases to one of the following destinations
 
@@ -153,7 +153,7 @@ Click **Create** at the bottom of the page.
 
 You are now ready to download your configuration and send it to Oracle for validation and activation.
 
-## Task 4: Download the Infrastructure Configuration Package 
+## Task 4: Download the Infrastructure Configuration Package
 
 1. Navigate back to Exadata Cloud@Customer console and select **Exadata Infrastructure**. Select the infrastructure created in **Task 1**.
 

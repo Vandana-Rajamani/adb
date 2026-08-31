@@ -28,7 +28,7 @@ Oracle Database@AWS automatically publishes a rich set of performance and health
 
     ![Custom Metric Namespaces](./images/explore-metrics-3.png " ")
 
- 3. Within **OracleDatabase@AWS** custom metric namespaces find the Autonomous Database metrics
+ 3. Within **OracleDatabase@AWS** custom metric namespaces find the Autonomous Database metrics.
 
     ![Autonomous Database metrics](./images/explore-metrics-4.png " ")
 
@@ -82,7 +82,7 @@ While viewing individual metrics is useful, a dashboard provides a consolidated,
 
    ![Create Sessins widget](./images/visualize-perf-9.png " ")
 
-4. View the Dashboard
+4. View the Dashboard.
 
    ![View Dashboard](./images/visualize-perf-8.png " ")
 
@@ -126,7 +126,7 @@ Dashboards are great for observing performance, but alarms are essential for pro
 
    ![View CPU Utilization](./images/proactive-monitor-11.png " ")
 
-5. *(Optional)* Temporarily lower the alarm threshold to test the notification flow (you'd get an e-mail like the one below)
+5. *(Optional)* Temporarily lower the alarm threshold to test the notification flow (you'd get an e-mail like the one below).
 
    ![Lower Alarm threshold](./images/proactive-monitor-12.png " ")
 

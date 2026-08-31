@@ -51,7 +51,9 @@ Your tenancy has service limits that define the maximum number of resources you 
 
 *Sign in to your OCI account as a fleet administrator.*
 
-- In the OCI Console navigation menu, go to **Autonomous AI Database**. In the side menu, select **Exadata Infrastructure**. Select the fleet compartment prepared in the [network-preparation lab](?lab=adb-network-prepare), then select **Create Exadata Infrastructure**.
+- In the OCI Console navigation menu, go to **Autonomous AI Database**. In the side menu, select **Exadata Infrastructure**. You will be redirected to the Exadata Infrastructure page under Exadata Database Service on Dedicated Exadata Infrastructure.
+
+- Select the fleet compartment prepared in the [network-preparation lab](?lab=adb-network-prepare), then select **Create Exadata Infrastructure**.
 
   ![This image shows the OCI Navigation menu for creating Exainfra](./images/create-cei1.png " ")
 
@@ -78,6 +80,9 @@ Your tenancy has service limits that define the maximum number of resources you 
 *All done! You have successfully deployed Cloud Exadata Infrastructure.*
 
 You may now **proceed to the next lab**.
+
+## Learn More
+[Creating an Exadata Cloud Infrastructure Instance](https://docs.oracle.com/en-us/iaas/exadatacloud/doc/ecs-create-instance.html#GUID-7860EF16-E79E-48DA-9D44-B5EE7B59B492)
 
 ## Acknowledgements
 
